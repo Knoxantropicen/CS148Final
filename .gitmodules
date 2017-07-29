@@ -7,3 +7,12 @@
 [submodule "lib/glew"]
 	path = lib/glew
 	url = https://github.com/nigels-com/glew.git
+[submodule "glew-cmake"]
+	path = glew-cmake
+	url = https://github.com/Perlmint/glew-cmake.git
+[submodule "lib/--"]
+	path = lib/--
+	url = https://github.com/Perlmint/glew-cmake.git
+[submodule "lib/--force"]
+	path = lib/--force
+	url = https://github.com/Perlmint/glew-cmake.git
