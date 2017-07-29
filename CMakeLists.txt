@@ -46,9 +46,9 @@ INCLUDE_DIRECTORIES("${MAINFOLDER}/include")
 # glew
 #
 #OPTION(glew-cmake_BUILD_SHARED "Build the shared glew library" OFF)
-#ADD_SUBDIRECTORY(lib/glew)
+#ADD_SUBDIRECTORY(lib/glew-cmake)
 
-#SET(GLEW_INCLUDE_PATH "${MAINFOLDER}/lib/glew/include")
+#SET(GLEW_INCLUDE_PATH "${MAINFOLDER}/lib/glew-cmake/include")
 
 #
 # glm
