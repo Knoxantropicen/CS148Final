@@ -13,6 +13,8 @@ public:
 	Particle(Shader * _shader, glm::vec3 _pos, glm::vec3 _v = glm::vec3(0, 0, 0), float _m = 1) {
 
 		m_shader = _shader;
+		m_hori = RM::getInstance().p_hori;
+		m_vert = RM::getInstance().p_vert;
 
 		pos = _pos;
 		v = _v;
@@ -35,18 +37,18 @@ public:
 			m_shader->Use();
 
 			glm::mat4 translation_matrix = glm::translate(glm::mat4(1.0), glm::vec3(pos));
-			translation_matrix = glm::scale(translation_matrix, glm::vec3(0.01, 0.01, 0.01));
+			translation_matrix = glm::scale(translation_matrix, glm::vec3(0.05, 0.05, 0.05));
 
             glUniformMatrix4fv(glGetUniformLocation(m_shader->Program, "model"), 1, GL_FALSE, glm::value_ptr(translation_matrix));
 
 			GLint objectColorLoc = glGetUniformLocation(m_shader->Program, "objectColor");
             glUniform3f(objectColorLoc, col[0], col[1], col[2]);
 
-            printf("%f, %f, %f\n", pos.x, pos.y, pos.z);
+            // printf("%f, %f, %f\n", pos.x, pos.y, pos.z);
 		}
 
-		glBindVertexArray(RM::getInstance().particleVAO);
-		glDrawArrays(GL_TRIANGLES, 0, 6 * 20 * 40);
+		glBindVertexArray(RM::getInstance().p_VAO);
+		glDrawArrays(GL_TRIANGLES, 0, 6 * 4 * m_hori * m_vert);
 		glBindVertexArray(0);
 	}
 
@@ -55,6 +57,7 @@ public:
 private:
 
 	Shader * m_shader;
+	int m_hori, m_vert;	// resolution
 
 	// physical data
 	glm::vec3 pos, v, a;	// position, velocity, acceleration

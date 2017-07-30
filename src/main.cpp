@@ -26,6 +26,8 @@ bool keys[1024];
 
 GLfloat curr_time = 0.0f;
 GLfloat last_time = 0.0f;
+double previous_seconds = 0;
+int frame_count = 0;
 
 FluidSystem * fluidSystem;
 
@@ -103,6 +105,22 @@ void cleanup() {
 	if (fluidSystem) delete fluidSystem;
 }
 
+void updateFpsCounter(GLFWwindow* window) {
+    double current_seconds;
+    double elapsed_seconds;
+    current_seconds = glfwGetTime();
+    elapsed_seconds = current_seconds - previous_seconds;
+    if (elapsed_seconds > 0.25) {
+        previous_seconds = current_seconds;
+        char tmp[128];
+        double fps = (double)frame_count / elapsed_seconds;
+        sprintf(tmp, "SPH Fluids - fps: %.2f", fps);
+        glfwSetWindowTitle(window, tmp);
+        frame_count = 0;
+    }
+    ++frame_count;
+}
+
 int main() {
 	GLFWwindow * window = setupWindow();
 	setupInputHandlers(window);
@@ -114,13 +132,19 @@ int main() {
 	while (!glfwWindowShouldClose(window)) {
 
 		handleInput();
+		updateFpsCounter(window);
 
 		curr_time = glfwGetTime();
-		if (curr_time - last_time > fluidSystem->m_time_step) {
-			fluidSystem->advance();
-			fluidSystem->render();
-			last_time = curr_time;
-		}
+
+		fluidSystem->advance(curr_time - last_time);
+		fluidSystem->render();
+
+		last_time = curr_time;
+		// if (curr_time - last_time > fluidSystem->m_time_step) {
+		// 	fluidSystem->advance();
+		// 	fluidSystem->render();
+		// 	last_time = curr_time;
+		// }
 	}
 
 	cleanup();

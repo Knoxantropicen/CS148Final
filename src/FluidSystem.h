@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>
+#include <deque>
 #include <cmath>
 
 #include <GL/glew.h>
@@ -17,20 +17,35 @@ public:
 		m_shader = new Shader("./shader.vs", "./shader.frag");
 
 		// add particles
-		for (int i=0; i<10; ++i) {
-			m_particles.push_back(Particle(m_shader, glm::vec3(0, 0, 0), glm::vec3(sin(i), 1, cos(i))));
-		}
+		// for (int i=0; i<100; ++i) {
+		// 	m_particles.push_back(Particle(m_shader, glm::vec3(0, 0, 0), glm::vec3(sin(i), 10, cos(i))));
+		// }
 		
 		// set time step
-		m_time_step = 0.1;
+		// m_time_step = 0.1;
+		m_total_time = 0;
+		m_max_p_num = 10000;
 
 		m_camera = new Camera(glm::vec3(0.0, 0.0, 10.0));
 	}
 
-	void advance() {
-		for (size_t i=0; i<m_particles.size(); ++i) {
-			m_particles[i].advance(m_time_step);
+	void advance(float time_step) {
+
+		for (int i=0; i<100; ++i) {
+			m_particles.push_back(new Particle(m_shader, glm::vec3(0, 0, 0), glm::vec3(sin(drand48()*2*M_PI), 1, cos(drand48()*2*M_PI))));
 		}
+
+		for (size_t i=0; i<m_particles.size(); ++i) {
+			m_particles[i]->advance(time_step);
+		}
+
+		while (m_particles.size() > m_max_p_num) {
+			Particle * curr_p = m_particles.front();
+			m_particles.pop_front();
+			delete curr_p;
+		}
+
+		m_total_time += time_step;
 	}
 
 	void render() const {
@@ -52,13 +67,13 @@ public:
         glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
 		for (size_t i=0; i<m_particles.size(); ++i) {
-			m_particles[i].render();
+			m_particles[i]->render();
 		}
 
 		glfwSwapBuffers(m_window);
 	}
 
-	float m_time_step;
+	// float m_time_step;
 
 	Camera * m_camera;
 private:
@@ -66,5 +81,8 @@ private:
 	GLFWwindow * m_window;
 	Shader * m_shader;
 
-	std::vector<Particle> m_particles;
+	float m_total_time;
+	size_t m_max_p_num;
+
+	std::deque<Particle *> m_particles;
 };
