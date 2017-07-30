@@ -29,6 +29,12 @@ public:
 	void advance(float dt) {	// less accurate
 		pos += v * dt + 0.5f * a * dt * dt;
 		v += a * dt;
+
+		// boundary condition
+		if (pos.y < -2.0f) {
+			pos.y = -2.0f + (-2.0f - pos.y);
+			v.y = 0.4 * -v.y;
+		}
 	}
 
 	void render() const {

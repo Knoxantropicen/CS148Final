@@ -24,15 +24,16 @@ public:
 		// set time step
 		// m_time_step = 0.1;
 		m_total_time = 0;
-		m_max_p_num = 10000;
+		m_max_p_num = 8000;
 
 		m_camera = new Camera(glm::vec3(0.0, 0.0, 10.0));
 	}
 
 	void advance(float time_step) {
 
-		for (int i=0; i<100; ++i) {
-			m_particles.push_back(new Particle(m_shader, glm::vec3(0, 0, 0), glm::vec3(sin(drand48()*2*M_PI), 1, cos(drand48()*2*M_PI))));
+		for (int i=0; i<200; ++i) {
+			double random_degree = drand48() * 2 * M_PI;
+			m_particles.push_back(new Particle(m_shader, glm::vec3(0, 1, 0), glm::vec3(sin(random_degree), 1, cos(random_degree))));
 		}
 
 		for (size_t i=0; i<m_particles.size(); ++i) {

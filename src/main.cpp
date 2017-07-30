@@ -24,8 +24,7 @@ GLfloat lastX = WIDTH / 2.0;
 GLfloat lastY = HEIGHT / 2.0;
 bool keys[1024];
 
-GLfloat curr_time = 0.0f;
-GLfloat last_time = 0.0f;
+float curr_time = 0.0f, last_time = 0.0f, delta_time = 0.0f;
 double previous_seconds = 0;
 int frame_count = 0;
 
@@ -34,7 +33,7 @@ FluidSystem * fluidSystem;
 GLFWwindow* setupWindow() 
 {
     glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
@@ -97,6 +96,15 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
 
 void handleInput() {
 	glfwPollEvents();
+
+	if (!fluidSystem || !fluidSystem->m_camera) {
+        return;
+    }
+
+    if (keys[GLFW_KEY_W]) fluidSystem->m_camera->ProcessKeyboard(FORWARD, delta_time);
+    if (keys[GLFW_KEY_S]) fluidSystem->m_camera->ProcessKeyboard(BACKWARD, delta_time);
+    if (keys[GLFW_KEY_A]) fluidSystem->m_camera->ProcessKeyboard(LEFT, delta_time);
+    if (keys[GLFW_KEY_D]) fluidSystem->m_camera->ProcessKeyboard(RIGHT, delta_time);
 }
 
 void cleanup() {
@@ -135,16 +143,12 @@ int main() {
 		updateFpsCounter(window);
 
 		curr_time = glfwGetTime();
+		delta_time = curr_time - last_time;
 
-		fluidSystem->advance(curr_time - last_time);
+		fluidSystem->advance(delta_time);
 		fluidSystem->render();
 
 		last_time = curr_time;
-		// if (curr_time - last_time > fluidSystem->m_time_step) {
-		// 	fluidSystem->advance();
-		// 	fluidSystem->render();
-		// 	last_time = curr_time;
-		// }
 	}
 
 	cleanup();
