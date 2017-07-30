@@ -31,29 +31,42 @@ LIST(APPEND CMAKE_PREFIX_PATH "${MAINFOLDER}")
 INCLUDE_DIRECTORIES("${MAINFOLDER}/include")
 
 #
+# Set compiler warnings
+#
+if(WIN32)
+
+else()
+    SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -Wextra -Werror -Wfloat-equal -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-pessimizing-move")
+    if(APPLE)
+    elseif(UNIX)
+        add_definitions(-DGLEW_EGL)
+    endif()
+endif()
+
+#
 # glfw
 #
-#OPTION(GLFW_BUILD_EXAMPLES  "Build the GLFW example programs"   OFF)
-#OPTION(GLFW_BUILD_TESTS     "Build the GLFW test programs"      OFF)
-#OPTION(GLFW_BUILD_DOCS      "Build the GLFW documentation"      OFF)
-#OPTION(GLFW_INSTALL         "Generate installation target"      OFF)
+OPTION(GLFW_BUILD_EXAMPLES  "Build the GLFW example programs"   OFF)
+OPTION(GLFW_BUILD_TESTS     "Build the GLFW test programs"      OFF)
+OPTION(GLFW_BUILD_DOCS      "Build the GLFW documentation"      OFF)
+OPTION(GLFW_INSTALL         "Generate installation target"      OFF)
 
-#ADD_SUBDIRECTORY(lib/glfw)
+ADD_SUBDIRECTORY(lib/glfw)
 
-#SET(GLFW_INCLUDE_PATH "${MAINFOLDER}/lib/glfw/include")
+SET(GLFW_INCLUDE_PATH "${MAINFOLDER}/lib/glfw/include")
 
 #
 # glew
 #
-#OPTION(glew-cmake_BUILD_SHARED "Build the shared glew library" OFF)
-#ADD_SUBDIRECTORY(lib/glew)
+OPTION(glew-cmake_BUILD_SHARED "Build the shared glew library" OFF)
+ADD_SUBDIRECTORY(lib/glew)
 
-#SET(GLEW_INCLUDE_PATH "${MAINFOLDER}/lib/glew/include")
+SET(GLEW_INCLUDE_PATH "${MAINFOLDER}/lib/glew/include")
 
 #
 # glm
 #
-#SET(GLM_INCLUDE_PATH "${MAINFOLDER}/lib/glm")
+SET(GLM_INCLUDE_PATH "${MAINFOLDER}/lib/glm")
 
 #
 # Add project sources

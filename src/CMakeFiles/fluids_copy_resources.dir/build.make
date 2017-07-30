@@ -43,10 +43,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
+CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
+CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 
 # Utility rule file for fluids_copy_resources.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
 include src/CMakeFiles/fluids_copy_resources.dir/progress.make
 
 src/CMakeFiles/fluids_copy_resources:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying resources "
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids/src && /Applications/CMake.app/Contents/bin/cmake -E copy_directory /Users/KnoxTYS/Desktop/SPH-Fluids/src/shaders /Users/KnoxTYS/Desktop/SPH-Fluids/bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying resources "
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && /Applications/CMake.app/Contents/bin/cmake -E copy_directory /Users/KnoxTYS/desktop/SPH-Fluids/src/shaders /Users/KnoxTYS/desktop/SPH-Fluids/bin
 
 fluids_copy_resources: src/CMakeFiles/fluids_copy_resources
 fluids_copy_resources: src/CMakeFiles/fluids_copy_resources.dir/build.make
@@ -68,10 +68,10 @@ src/CMakeFiles/fluids_copy_resources.dir/build: fluids_copy_resources
 .PHONY : src/CMakeFiles/fluids_copy_resources.dir/build
 
 src/CMakeFiles/fluids_copy_resources.dir/clean:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -P CMakeFiles/fluids_copy_resources.dir/cmake_clean.cmake
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -P CMakeFiles/fluids_copy_resources.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/fluids_copy_resources.dir/clean
 
 src/CMakeFiles/fluids_copy_resources.dir/depend:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/KnoxTYS/Desktop/SPH-Fluids /Users/KnoxTYS/Desktop/SPH-Fluids/src /Users/KnoxTYS/Desktop/SPH-Fluids /Users/KnoxTYS/Desktop/SPH-Fluids/src /Users/KnoxTYS/Desktop/SPH-Fluids/src/CMakeFiles/fluids_copy_resources.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/KnoxTYS/desktop/SPH-Fluids /Users/KnoxTYS/desktop/SPH-Fluids/src /Users/KnoxTYS/desktop/SPH-Fluids /Users/KnoxTYS/desktop/SPH-Fluids/src /Users/KnoxTYS/desktop/SPH-Fluids/src/CMakeFiles/fluids_copy_resources.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/fluids_copy_resources.dir/depend
 

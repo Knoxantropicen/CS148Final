@@ -13,6 +13,7 @@ SET(project_LIB ${PROJECT_NAME}_lib CACHE INTERNAL "Project Library")
 
 SET(project_SRCS
         main.cpp
+        FluidSystem.cpp
 )
 
 ADD_LIBRARY(${project_LIB} ${project_SRCS})

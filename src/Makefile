@@ -48,13 +48,59 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
+CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
+CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -80,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles /Users/KnoxTYS/Desktop/SPH-Fluids/src/CMakeFiles/progress.marks
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles 0
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles /Users/KnoxTYS/desktop/SPH-Fluids/src/CMakeFiles/progress.marks
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/fluids_copy_resources.dir/rule:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids_copy_resources.dir/rule
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids_copy_resources.dir/rule
 .PHONY : src/CMakeFiles/fluids_copy_resources.dir/rule
 
 # Convenience name for target.
@@ -122,12 +168,12 @@ fluids_copy_resources: src/CMakeFiles/fluids_copy_resources.dir/rule
 
 # fast build rule for target.
 fluids_copy_resources/fast:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_copy_resources.dir/build.make src/CMakeFiles/fluids_copy_resources.dir/build
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_copy_resources.dir/build.make src/CMakeFiles/fluids_copy_resources.dir/build
 .PHONY : fluids_copy_resources/fast
 
 # Convenience name for target.
 src/CMakeFiles/fluids.dir/rule:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids.dir/rule
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids.dir/rule
 .PHONY : src/CMakeFiles/fluids.dir/rule
 
 # Convenience name for target.
@@ -137,12 +183,12 @@ fluids: src/CMakeFiles/fluids.dir/rule
 
 # fast build rule for target.
 fluids/fast:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/build
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/build
 .PHONY : fluids/fast
 
 # Convenience name for target.
 src/CMakeFiles/fluids_lib.dir/rule:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids_lib.dir/rule
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids_lib.dir/rule
 .PHONY : src/CMakeFiles/fluids_lib.dir/rule
 
 # Convenience name for target.
@@ -152,8 +198,35 @@ fluids_lib: src/CMakeFiles/fluids_lib.dir/rule
 
 # fast build rule for target.
 fluids_lib/fast:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/build
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/build
 .PHONY : fluids_lib/fast
+
+FluidSystem.o: FluidSystem.cpp.o
+
+.PHONY : FluidSystem.o
+
+# target to build an object file
+FluidSystem.cpp.o:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o
+.PHONY : FluidSystem.cpp.o
+
+FluidSystem.i: FluidSystem.cpp.i
+
+.PHONY : FluidSystem.i
+
+# target to preprocess a source file
+FluidSystem.cpp.i:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.i
+.PHONY : FluidSystem.cpp.i
+
+FluidSystem.s: FluidSystem.cpp.s
+
+.PHONY : FluidSystem.s
+
+# target to generate assembly for a file
+FluidSystem.cpp.s:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.s
+.PHONY : FluidSystem.cpp.s
 
 main.o: main.cpp.o
 
@@ -161,8 +234,8 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.o
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.o
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.o
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -171,8 +244,8 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.i
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.i
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.i
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -181,8 +254,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.s
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.s
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.s
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -191,11 +264,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... fluids_copy_resources"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... fluids_copy_resources"
 	@echo "... fluids"
 	@echo "... fluids_lib"
+	@echo "... FluidSystem.o"
+	@echo "... FluidSystem.i"
+	@echo "... FluidSystem.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -210,6 +290,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

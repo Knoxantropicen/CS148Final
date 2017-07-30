@@ -43,10 +43,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
+CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
+CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/fluids_lib.dir/depend.make
@@ -59,16 +59,16 @@ include src/CMakeFiles/fluids_lib.dir/flags.make
 
 src/CMakeFiles/fluids_lib.dir/main.cpp.o: src/CMakeFiles/fluids_lib.dir/flags.make
 src/CMakeFiles/fluids_lib.dir/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/fluids_lib.dir/main.cpp.o"
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fluids_lib.dir/main.cpp.o -c /Users/KnoxTYS/Desktop/SPH-Fluids/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/fluids_lib.dir/main.cpp.o"
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fluids_lib.dir/main.cpp.o -c /Users/KnoxTYS/desktop/SPH-Fluids/src/main.cpp
 
 src/CMakeFiles/fluids_lib.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fluids_lib.dir/main.cpp.i"
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/KnoxTYS/Desktop/SPH-Fluids/src/main.cpp > CMakeFiles/fluids_lib.dir/main.cpp.i
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/KnoxTYS/desktop/SPH-Fluids/src/main.cpp > CMakeFiles/fluids_lib.dir/main.cpp.i
 
 src/CMakeFiles/fluids_lib.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fluids_lib.dir/main.cpp.s"
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/KnoxTYS/Desktop/SPH-Fluids/src/main.cpp -o CMakeFiles/fluids_lib.dir/main.cpp.s
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/KnoxTYS/desktop/SPH-Fluids/src/main.cpp -o CMakeFiles/fluids_lib.dir/main.cpp.s
 
 src/CMakeFiles/fluids_lib.dir/main.cpp.o.requires:
 
@@ -81,19 +81,45 @@ src/CMakeFiles/fluids_lib.dir/main.cpp.o.provides: src/CMakeFiles/fluids_lib.dir
 src/CMakeFiles/fluids_lib.dir/main.cpp.o.provides.build: src/CMakeFiles/fluids_lib.dir/main.cpp.o
 
 
+src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o: src/CMakeFiles/fluids_lib.dir/flags.make
+src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o: src/FluidSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o"
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o -c /Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.cpp
+
+src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fluids_lib.dir/FluidSystem.cpp.i"
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.cpp > CMakeFiles/fluids_lib.dir/FluidSystem.cpp.i
+
+src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fluids_lib.dir/FluidSystem.cpp.s"
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.cpp -o CMakeFiles/fluids_lib.dir/FluidSystem.cpp.s
+
+src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o.requires
+
+src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o.provides: src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o.provides.build
+.PHONY : src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o.provides
+
+src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o.provides.build: src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o
+
+
 # Object files for target fluids_lib
 fluids_lib_OBJECTS = \
-"CMakeFiles/fluids_lib.dir/main.cpp.o"
+"CMakeFiles/fluids_lib.dir/main.cpp.o" \
+"CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o"
 
 # External object files for target fluids_lib
 fluids_lib_EXTERNAL_OBJECTS =
 
 lib/libfluids.a: src/CMakeFiles/fluids_lib.dir/main.cpp.o
+lib/libfluids.a: src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o
 lib/libfluids.a: src/CMakeFiles/fluids_lib.dir/build.make
 lib/libfluids.a: src/CMakeFiles/fluids_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../lib/libfluids.a"
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -P CMakeFiles/fluids_lib.dir/cmake_clean_target.cmake
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fluids_lib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../lib/libfluids.a"
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -P CMakeFiles/fluids_lib.dir/cmake_clean_target.cmake
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fluids_lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/fluids_lib.dir/build: lib/libfluids.a
@@ -101,14 +127,15 @@ src/CMakeFiles/fluids_lib.dir/build: lib/libfluids.a
 .PHONY : src/CMakeFiles/fluids_lib.dir/build
 
 src/CMakeFiles/fluids_lib.dir/requires: src/CMakeFiles/fluids_lib.dir/main.cpp.o.requires
+src/CMakeFiles/fluids_lib.dir/requires: src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o.requires
 
 .PHONY : src/CMakeFiles/fluids_lib.dir/requires
 
 src/CMakeFiles/fluids_lib.dir/clean:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -P CMakeFiles/fluids_lib.dir/cmake_clean.cmake
+	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -P CMakeFiles/fluids_lib.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/fluids_lib.dir/clean
 
 src/CMakeFiles/fluids_lib.dir/depend:
-	cd /Users/KnoxTYS/Desktop/SPH-Fluids && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/KnoxTYS/Desktop/SPH-Fluids /Users/KnoxTYS/Desktop/SPH-Fluids/src /Users/KnoxTYS/Desktop/SPH-Fluids /Users/KnoxTYS/Desktop/SPH-Fluids/src /Users/KnoxTYS/Desktop/SPH-Fluids/src/CMakeFiles/fluids_lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/KnoxTYS/desktop/SPH-Fluids /Users/KnoxTYS/desktop/SPH-Fluids/src /Users/KnoxTYS/desktop/SPH-Fluids /Users/KnoxTYS/desktop/SPH-Fluids/src /Users/KnoxTYS/desktop/SPH-Fluids/src/CMakeFiles/fluids_lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/fluids_lib.dir/depend
 

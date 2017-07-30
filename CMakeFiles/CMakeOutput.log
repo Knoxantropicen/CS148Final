@@ -530,3 +530,41 @@ Linking CXX executable cmTC_7eda7
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_24cfc/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_24cfc.dir/build.make CMakeFiles/cmTC_24cfc.dir/build
+Building C object CMakeFiles/cmTC_24cfc.dir/CheckIncludeFile.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -o CMakeFiles/cmTC_24cfc.dir/CheckIncludeFile.c.o   -c /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_24cfc
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24cfc.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_24cfc.dir/CheckIncludeFile.c.o  -o cmTC_24cfc 
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4c819/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_4c819.dir/build.make CMakeFiles/cmTC_4c819.dir/build
+Building C object CMakeFiles/cmTC_4c819.dir/CheckSymbolExists.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -o CMakeFiles/cmTC_4c819.dir/CheckSymbolExists.c.o   -c /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_4c819
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c819.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4c819.dir/CheckSymbolExists.c.o  -o cmTC_4c819 
+
+File /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

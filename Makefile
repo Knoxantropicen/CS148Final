@@ -48,13 +48,59 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
+CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/KnoxTYS/Desktop/SPH-Fluids
+CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -80,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/Desktop/SPH-Fluids/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +155,45 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named glfw
+
+# Build rule for target.
+glfw: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glfw
+.PHONY : glfw
+
+# fast build rule for target.
+glfw/fast:
+	$(MAKE) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
+.PHONY : glfw/fast
+
+#=============================================================================
+# Target rules for targets named libglewmx_static
+
+# Build rule for target.
+libglewmx_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libglewmx_static
+.PHONY : libglewmx_static
+
+# fast build rule for target.
+libglewmx_static/fast:
+	$(MAKE) -f lib/glew/CMakeFiles/libglewmx_static.dir/build.make lib/glew/CMakeFiles/libglewmx_static.dir/build
+.PHONY : libglewmx_static/fast
+
+#=============================================================================
+# Target rules for targets named libglew_static
+
+# Build rule for target.
+libglew_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libglew_static
+.PHONY : libglew_static
+
+# fast build rule for target.
+libglew_static/fast:
+	$(MAKE) -f lib/glew/CMakeFiles/libglew_static.dir/build.make lib/glew/CMakeFiles/libglew_static.dir/build
+.PHONY : libglew_static/fast
 
 #=============================================================================
 # Target rules for targets named fluids_copy_resources
@@ -155,8 +240,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... glfw"
+	@echo "... libglewmx_static"
+	@echo "... libglew_static"
 	@echo "... fluids_copy_resources"
 	@echo "... fluids"
 	@echo "... fluids_lib"
