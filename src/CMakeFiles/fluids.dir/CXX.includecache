@@ -6,18 +6,56 @@
 
 #IncludeRegexTransform: 
 
+/Users/KnoxTYS/desktop/SPH-Fluids/src/Camera.h
+vector
+-
+GL/glew.h
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+
 /Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.h
 vector
 -
 cmath
 -
+GL/glew.h
+-
 GLFW/glfw3.h
 -
 Particle.h
 /Users/KnoxTYS/desktop/SPH-Fluids/src/Particle.h
+Camera.h
+/Users/KnoxTYS/desktop/SPH-Fluids/src/Camera.h
 
 /Users/KnoxTYS/desktop/SPH-Fluids/src/Particle.h
 glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+Shader.h
+/Users/KnoxTYS/desktop/SPH-Fluids/src/Shader.h
+ResourceManager.h
+/Users/KnoxTYS/desktop/SPH-Fluids/src/ResourceManager.h
+
+/Users/KnoxTYS/desktop/SPH-Fluids/src/ResourceManager.h
+GL/glew.h
+-
+
+/Users/KnoxTYS/desktop/SPH-Fluids/src/Shader.h
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+GL/glew.h
 -
 
 /Users/KnoxTYS/desktop/SPH-Fluids/src/main.cpp
