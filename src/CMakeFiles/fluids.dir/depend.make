@@ -3,8 +3,6 @@
 
 src/CMakeFiles/fluids.dir/main.cpp.o: src/Camera.h
 src/CMakeFiles/fluids.dir/main.cpp.o: src/FluidSystem.h
-src/CMakeFiles/fluids.dir/main.cpp.o: src/Particle.h
-src/CMakeFiles/fluids.dir/main.cpp.o: src/ResourceManager.h
 src/CMakeFiles/fluids.dir/main.cpp.o: src/Shader.h
 src/CMakeFiles/fluids.dir/main.cpp.o: src/main.cpp
 src/CMakeFiles/fluids.dir/main.cpp.o: lib/glew/include/GL/glew.h

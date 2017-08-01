@@ -201,6 +201,33 @@ fluids_lib/fast:
 	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/build
 .PHONY : fluids_lib/fast
 
+FluidSystem.o: FluidSystem.cpp.o
+
+.PHONY : FluidSystem.o
+
+# target to build an object file
+FluidSystem.cpp.o:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o
+.PHONY : FluidSystem.cpp.o
+
+FluidSystem.i: FluidSystem.cpp.i
+
+.PHONY : FluidSystem.i
+
+# target to preprocess a source file
+FluidSystem.cpp.i:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.i
+.PHONY : FluidSystem.cpp.i
+
+FluidSystem.s: FluidSystem.cpp.s
+
+.PHONY : FluidSystem.s
+
+# target to generate assembly for a file
+FluidSystem.cpp.s:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/FluidSystem.cpp.s
+.PHONY : FluidSystem.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -246,6 +273,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... fluids"
 	@echo "... fluids_lib"
+	@echo "... FluidSystem.o"
+	@echo "... FluidSystem.i"
+	@echo "... FluidSystem.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

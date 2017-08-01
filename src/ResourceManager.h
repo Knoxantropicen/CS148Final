@@ -22,93 +22,96 @@ private:
   //       glEnablep_vertexAttribArray(0);
   //       glBindp_vertexArray(0);
 
-		// p data initialization
-		p_hori = 20, p_vert = 40;
-        float delta_h = M_PI / p_hori, delta_v = 2 * M_PI / p_vert;
-        float phi0, phi1, theta0, theta1;
-        float x00, x01, x10, x11, y0, y1, z00, z01, z10, z11;
 
-        GLfloat * p_vertices = new GLfloat[36 * 8 * p_hori * p_vert];
+        
 
-        int c = 0;
+		// // p data initialization
+		// p_hori = 20, p_vert = 40;
+  //       float delta_h = M_PI / p_hori, delta_v = 2 * M_PI / p_vert;
+  //       float phi0, phi1, theta0, theta1;
+  //       float x00, x01, x10, x11, y0, y1, z00, z01, z10, z11;
 
-        for (int i=0; i<p_hori; ++i) {
+  //       GLfloat * p_vertices = new GLfloat[36 * 8 * p_hori * p_vert];
 
-            phi0 = M_PI/2 + i * delta_h;
-            phi1 = M_PI/2 + (i+1) * delta_h;
+  //       int c = 0;
 
-            y0 = cos(phi0);
-            y1 = cos(phi1);
+  //       for (int i=0; i<p_hori; ++i) {
 
-            for (int j=0; j<2*p_vert; ++j) {
+  //           phi0 = M_PI/2 + i * delta_h;
+  //           phi1 = M_PI/2 + (i+1) * delta_h;
 
-                theta0 = j * delta_v;
-                theta1 = (j+1) * delta_v;
+  //           y0 = cos(phi0);
+  //           y1 = cos(phi1);
 
-                x00 = cos(theta0) * sin(phi0);
-                x10 = cos(theta0) * sin(phi1);
-                x01 = cos(theta1) * sin(phi0);
-                x11 = cos(theta1) * sin(phi1);
-                z00 = sin(theta0) * sin(phi0);
-                z10 = sin(theta0) * sin(phi1);
-                z01 = sin(theta1) * sin(phi0);
-                z11 = sin(theta1) * sin(phi1);
+  //           for (int j=0; j<2*p_vert; ++j) {
 
-                p_vertices[c] = p_vertices[c+3] = x00;
-                p_vertices[c+1] = p_vertices[c+4] = y0;
-                p_vertices[c+2] = p_vertices[c+5] = z00;
+  //               theta0 = j * delta_v;
+  //               theta1 = (j+1) * delta_v;
 
-                p_vertices[c+6] = p_vertices[c+9] = x11;
-                p_vertices[c+7] = p_vertices[c+10] = y1;
-                p_vertices[c+8] = p_vertices[c+11] = z11;
+  //               x00 = cos(theta0) * sin(phi0);
+  //               x10 = cos(theta0) * sin(phi1);
+  //               x01 = cos(theta1) * sin(phi0);
+  //               x11 = cos(theta1) * sin(phi1);
+  //               z00 = sin(theta0) * sin(phi0);
+  //               z10 = sin(theta0) * sin(phi1);
+  //               z01 = sin(theta1) * sin(phi0);
+  //               z11 = sin(theta1) * sin(phi1);
 
-                p_vertices[c+12] = p_vertices[c+15] = x10;
-                p_vertices[c+13] = p_vertices[c+16] = y1;
-                p_vertices[c+14] = p_vertices[c+17] = z10;
+  //               p_vertices[c] = p_vertices[c+3] = x00;
+  //               p_vertices[c+1] = p_vertices[c+4] = y0;
+  //               p_vertices[c+2] = p_vertices[c+5] = z00;
 
-                p_vertices[c+18] = p_vertices[c+21] = x00;
-                p_vertices[c+19] = p_vertices[c+22] = y0;
-                p_vertices[c+20] = p_vertices[c+23] = z00;
+  //               p_vertices[c+6] = p_vertices[c+9] = x11;
+  //               p_vertices[c+7] = p_vertices[c+10] = y1;
+  //               p_vertices[c+8] = p_vertices[c+11] = z11;
 
-                p_vertices[c+24] = p_vertices[c+27] = x01;
-                p_vertices[c+25] = p_vertices[c+28] = y0;
-                p_vertices[c+26] = p_vertices[c+29] = z01;
+  //               p_vertices[c+12] = p_vertices[c+15] = x10;
+  //               p_vertices[c+13] = p_vertices[c+16] = y1;
+  //               p_vertices[c+14] = p_vertices[c+17] = z10;
 
-                p_vertices[c+30] = p_vertices[c+33] = x11;
-                p_vertices[c+31] = p_vertices[c+34] = y1;
-                p_vertices[c+32] = p_vertices[c+35] = z11;
+  //               p_vertices[c+18] = p_vertices[c+21] = x00;
+  //               p_vertices[c+19] = p_vertices[c+22] = y0;
+  //               p_vertices[c+20] = p_vertices[c+23] = z00;
 
-                c += 36;
-            }
+  //               p_vertices[c+24] = p_vertices[c+27] = x01;
+  //               p_vertices[c+25] = p_vertices[c+28] = y0;
+  //               p_vertices[c+26] = p_vertices[c+29] = z01;
 
-            y0 = cos(M_PI - phi0);
-            y1 = cos(M_PI - phi1);
-            for (int j=0; j<2*p_vert; ++j) {
-                for (int k=0; k<36; ++k) {
-                    p_vertices[c+k] = p_vertices[c+k-2*p_vert*36];
-                    p_vertices[c+1] = p_vertices[c+4] = p_vertices[c+19] = p_vertices[c+22] = p_vertices[c+25] = p_vertices[c+28] = y0;
-                    p_vertices[c+7] = p_vertices[c+10] = p_vertices[c+13] = p_vertices[c+16] = p_vertices[c+31] = p_vertices[c+34] = y1;
-                }
-                c += 36;
-            }
-        }
+  //               p_vertices[c+30] = p_vertices[c+33] = x11;
+  //               p_vertices[c+31] = p_vertices[c+34] = y1;
+  //               p_vertices[c+32] = p_vertices[c+35] = z11;
 
-        glGenVertexArrays(1, &p_VAO);
-        glGenBuffers(1, &p_VBO);
+  //               c += 36;
+  //           }
 
-        glBindBuffer(GL_ARRAY_BUFFER, p_VBO);
-        glBufferData(GL_ARRAY_BUFFER, 36 * 8 * p_hori * p_vert, p_vertices, GL_STATIC_DRAW);
+  //           y0 = cos(M_PI - phi0);
+  //           y1 = cos(M_PI - phi1);
+  //           for (int j=0; j<2*p_vert; ++j) {
+  //               for (int k=0; k<36; ++k) {
+  //                   p_vertices[c+k] = p_vertices[c+k-2*p_vert*36];
+  //                   p_vertices[c+1] = p_vertices[c+4] = p_vertices[c+19] = p_vertices[c+22] = p_vertices[c+25] = p_vertices[c+28] = y0;
+  //                   p_vertices[c+7] = p_vertices[c+10] = p_vertices[c+13] = p_vertices[c+16] = p_vertices[c+31] = p_vertices[c+34] = y1;
+  //               }
+  //               c += 36;
+  //           }
+  //       }
 
-        glBindVertexArray(p_VAO);
+  //       glGenVertexArrays(1, &p_VAO);
+  //       glGenBuffers(1, &p_VBO);
 
-        // Position attribute
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
-        glEnableVertexAttribArray(0);
+  //       glBindBuffer(GL_ARRAY_BUFFER, p_VBO);
+  //       glBufferData(GL_ARRAY_BUFFER, 36 * 8 * p_hori * p_vert, p_vertices, GL_STATIC_DRAW);
 
-        // Normal attribute
-        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
-        glEnableVertexAttribArray(1);
-        glBindVertexArray(0);
+  //       glBindVertexArray(p_VAO);
+
+  //       // Position attribute
+  //       glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
+  //       glEnableVertexAttribArray(0);
+
+  //       // Normal attribute
+  //       glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
+  //       glEnableVertexAttribArray(1);
+  //       glBindVertexArray(0);
 
 	}
 	~RM() {}
@@ -120,6 +123,6 @@ public:
 		return instance;
 	}
 
-	GLuint p_VAO, p_VBO;
-	int p_hori, p_vert;
+	// GLuint p_VAO, p_VBO;
+	// int p_hori, p_vert;
 };

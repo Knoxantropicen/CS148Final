@@ -34,13 +34,17 @@ GLFWwindow* setupWindow()
 {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
     GLFWwindow * window = glfwCreateWindow(WIDTH, HEIGHT, "SPH Fluids", nullptr, nullptr);
+
     glfwMakeContextCurrent(window);
+    if (window == NULL) {
+    	printf("failed\n");
+    }
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
@@ -51,6 +55,8 @@ GLFWwindow* setupWindow()
     int w, h;
     glfwGetFramebufferSize(window, &w, &h);
     glViewport(0, 0, w, h);
+
+    glEnable(GL_PROGRAM_POINT_SIZE);
 
     return window;
 }
@@ -145,8 +151,9 @@ int main() {
 		curr_time = glfwGetTime();
 		delta_time = curr_time - last_time;
 
-		fluidSystem->advance(delta_time);
-		fluidSystem->render();
+		// fluidSystem->advance(delta_time);
+		// fluidSystem->render();
+        fluidSystem->advance(delta_time);
 
 		last_time = curr_time;
 	}

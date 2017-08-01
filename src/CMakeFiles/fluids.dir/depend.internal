@@ -4,8 +4,6 @@
 src/CMakeFiles/fluids.dir/main.cpp.o
  /Users/KnoxTYS/desktop/SPH-Fluids/src/Camera.h
  /Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.h
- /Users/KnoxTYS/desktop/SPH-Fluids/src/Particle.h
- /Users/KnoxTYS/desktop/SPH-Fluids/src/ResourceManager.h
  /Users/KnoxTYS/desktop/SPH-Fluids/src/Shader.h
  /Users/KnoxTYS/desktop/SPH-Fluids/src/main.cpp
  lib/glew/include/GL/glew.h

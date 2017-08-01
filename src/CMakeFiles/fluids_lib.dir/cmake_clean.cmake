@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fluids_lib.dir/main.cpp.o"
+  "CMakeFiles/fluids_lib.dir/FluidSystem.cpp.o"
   "../lib/libfluids.pdb"
   "../lib/libfluids.a"
 )
