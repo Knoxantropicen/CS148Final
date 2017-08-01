@@ -19,10 +19,11 @@ struct Particle {
 	glm::vec3 pos, vel, col;
 	float lifetime;
 	Particle() {
-		pos = glm::vec3(-1.0f + drand48()*2.0f, 1.0f, -1.0f + drand48()*2.0f);
-		double d = drand48() * M_PI / 180;
-		vel = glm::vec3(sin(d) * 2, 1.0f, cos(d) * 2);
-		col = glm::vec3(0.0f, 1.0f, 1.0f);
+		pos = glm::vec3(-1.0f + drand48()*2.0f, -1.0f + drand48()*2.0f, -1.0f + drand48()*2.0f);
+		// double d = drand48() * M_PI / 180;
+		// vel = glm::vec3(sin(d) * 2, 1.0f, cos(d) * 2);
+		vel = glm::vec3(-1.0f + drand48()*2.0f, 0, -1.0f + drand48()*2.0f);
+		col = glm::vec3(drand48(), drand48(), drand48());
 		lifetime = 0.0f;
 	}
 };

@@ -6,10 +6,10 @@ FluidSystem::FluidSystem(GLFWwindow * window) {
 	m_advect_shader = new Shader("./advect.vs", 0);
 
 	m_total_time = 0;
-	m_max_p_num = 200;
+	m_max_p_num = 20000;
 
 	m_camera = new Camera(glm::vec3(0.0, 0.0, 10.0));
-	
+
 	m_particles = new Particle[m_max_p_num];
 
 	// glGenVertexArrays(1, &m_advectVAO);
@@ -57,7 +57,6 @@ void FluidSystem::update(float time_step) {
 
 	m_advect_shader->Use();
 	glUniform1f(glGetUniformLocation(m_advect_shader->Program, "dt"), time_step);
-	glUniform3f(glGetUniformLocation(m_advect_shader->Program, "a"), 0.0f, -0.98f, 0.0f);
 
 	glBindVertexArray(m_particleVAO);
 
