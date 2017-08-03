@@ -11,7 +11,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/random.hpp>
 
-#include "FluidSystem.h"
+#include "ParticleSystem.h"
 
 using namespace std;
 
@@ -28,7 +28,7 @@ float curr_time = 0.0f, last_time = 0.0f, delta_time = 0.0f;
 double previous_seconds = 0;
 int frame_count = 0;
 
-FluidSystem * fluidSystem;
+ParticleSystem * particleSystem;
 
 GLFWwindow* setupWindow() 
 {
@@ -39,7 +39,7 @@ GLFWwindow* setupWindow()
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-    GLFWwindow * window = glfwCreateWindow(WIDTH, HEIGHT, "SPH Fluids", nullptr, nullptr);
+    GLFWwindow * window = glfwCreateWindow(WIDTH, HEIGHT, "Particle System", nullptr, nullptr);
 
     glfwMakeContextCurrent(window);
     if (window == NULL) {
@@ -57,6 +57,9 @@ GLFWwindow* setupWindow()
     glViewport(0, 0, w, h);
 
     glEnable(GL_PROGRAM_POINT_SIZE);
+    glEnable(GL_POINT_SPRITE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 
     return window;
 }
@@ -70,6 +73,9 @@ void setupInputHandlers(GLFWwindow * window) {
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode){
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GL_TRUE);
+    }
+    if (key == GLFW_KEY_P && action == GLFW_RELEASE) {
+        if (particleSystem) particleSystem->m_system_stop = !particleSystem->m_system_stop;
     }
 
     if (action == GLFW_PRESS) {
@@ -88,36 +94,42 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
     }
 
     GLfloat xoffset = xpos - lastX;
-    GLfloat yoffset = lastY - ypos;  // Reversed since y-coordinates go from bottom to top
+    GLfloat yoffset = lastY - ypos;
 
     lastX = xpos;
     lastY = ypos;
 
-    fluidSystem->m_camera->ProcessMouseMovement(xoffset, yoffset);
+    particleSystem->m_camera->ProcessMouseMovement(xoffset, yoffset);
 }
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
-    fluidSystem->m_camera->ProcessMouseScroll(yoffset);
+    particleSystem->m_camera->ProcessMouseScroll(yoffset);
 }
 
 void handleInput() {
 	glfwPollEvents();
 
-	if (!fluidSystem || !fluidSystem->m_camera) {
+	if (!particleSystem || !particleSystem->m_camera) {
         return;
     }
 
-    if (keys[GLFW_KEY_W]) fluidSystem->m_camera->ProcessKeyboard(FORWARD, delta_time);
-    if (keys[GLFW_KEY_S]) fluidSystem->m_camera->ProcessKeyboard(BACKWARD, delta_time);
-    if (keys[GLFW_KEY_A]) fluidSystem->m_camera->ProcessKeyboard(LEFT, delta_time);
-    if (keys[GLFW_KEY_D]) fluidSystem->m_camera->ProcessKeyboard(RIGHT, delta_time);
+    if (keys[GLFW_KEY_W]) particleSystem->m_camera->ProcessKeyboard(FORWARD, delta_time);
+    if (keys[GLFW_KEY_S]) particleSystem->m_camera->ProcessKeyboard(BACKWARD, delta_time);
+    if (keys[GLFW_KEY_A]) particleSystem->m_camera->ProcessKeyboard(LEFT, delta_time);
+    if (keys[GLFW_KEY_D]) particleSystem->m_camera->ProcessKeyboard(RIGHT, delta_time);
+
+    if (keys[GLFW_KEY_I]) particleSystem->m_z -= 0.1f;
+    if (keys[GLFW_KEY_K]) particleSystem->m_z += 0.1f;
+    if (keys[GLFW_KEY_J]) particleSystem->m_x -= 0.1f;
+    if (keys[GLFW_KEY_L]) particleSystem->m_x += 0.1f;
 }
 
 void cleanup() {
 	glfwTerminate();
 
-	if (fluidSystem) delete fluidSystem;
+	if (particleSystem) delete particleSystem;
 }
+
 
 void updateFpsCounter(GLFWwindow* window) {
     double current_seconds;
@@ -128,7 +140,7 @@ void updateFpsCounter(GLFWwindow* window) {
         previous_seconds = current_seconds;
         char tmp[128];
         double fps = (double)frame_count / elapsed_seconds;
-        sprintf(tmp, "SPH Fluids - fps: %.2f", fps);
+        sprintf(tmp, "Particle System - fps: %.2f", fps);
         glfwSetWindowTitle(window, tmp);
         frame_count = 0;
     }
@@ -139,7 +151,7 @@ int main() {
 	GLFWwindow * window = setupWindow();
 	setupInputHandlers(window);
 
-	fluidSystem = new FluidSystem(window);
+	particleSystem = new ParticleSystem(window);
 
 	last_time = glfwGetTime();
 
@@ -151,9 +163,7 @@ int main() {
 		curr_time = glfwGetTime();
 		delta_time = curr_time - last_time;
 
-		// fluidSystem->advance(delta_time);
-		// fluidSystem->render();
-        fluidSystem->advance(delta_time);
+        particleSystem->advance(delta_time);
 
 		last_time = curr_time;
 	}

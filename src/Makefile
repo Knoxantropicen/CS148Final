@@ -157,49 +157,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/fluids_copy_resources.dir/rule:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids_copy_resources.dir/rule
-.PHONY : src/CMakeFiles/fluids_copy_resources.dir/rule
+src/CMakeFiles/particles_lib.dir/rule:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_lib.dir/rule
+.PHONY : src/CMakeFiles/particles_lib.dir/rule
 
 # Convenience name for target.
-fluids_copy_resources: src/CMakeFiles/fluids_copy_resources.dir/rule
+particles_lib: src/CMakeFiles/particles_lib.dir/rule
 
-.PHONY : fluids_copy_resources
+.PHONY : particles_lib
 
 # fast build rule for target.
-fluids_copy_resources/fast:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_copy_resources.dir/build.make src/CMakeFiles/fluids_copy_resources.dir/build
-.PHONY : fluids_copy_resources/fast
+particles_lib/fast:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/build
+.PHONY : particles_lib/fast
 
 # Convenience name for target.
-src/CMakeFiles/fluids.dir/rule:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids.dir/rule
-.PHONY : src/CMakeFiles/fluids.dir/rule
+src/CMakeFiles/particles_copy_resources.dir/rule:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_copy_resources.dir/rule
+.PHONY : src/CMakeFiles/particles_copy_resources.dir/rule
 
 # Convenience name for target.
-fluids: src/CMakeFiles/fluids.dir/rule
+particles_copy_resources: src/CMakeFiles/particles_copy_resources.dir/rule
 
-.PHONY : fluids
+.PHONY : particles_copy_resources
 
 # fast build rule for target.
-fluids/fast:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/build
-.PHONY : fluids/fast
+particles_copy_resources/fast:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/build
+.PHONY : particles_copy_resources/fast
 
 # Convenience name for target.
-src/CMakeFiles/fluids_lib.dir/rule:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids_lib.dir/rule
-.PHONY : src/CMakeFiles/fluids_lib.dir/rule
+src/CMakeFiles/particles.dir/rule:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles.dir/rule
+.PHONY : src/CMakeFiles/particles.dir/rule
 
 # Convenience name for target.
-fluids_lib: src/CMakeFiles/fluids_lib.dir/rule
+particles: src/CMakeFiles/particles.dir/rule
 
-.PHONY : fluids_lib
+.PHONY : particles
 
 # fast build rule for target.
-fluids_lib/fast:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/build
-.PHONY : fluids_lib/fast
+particles/fast:
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/build
+.PHONY : particles/fast
 
 main.o: main.cpp.o
 
@@ -207,8 +207,8 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.o
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.o
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.o
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -217,8 +217,8 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.i
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.i
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.i
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -227,8 +227,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/main.cpp.s
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/main.cpp.s
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.s
+	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -241,11 +241,11 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... fluids_copy_resources"
 	@echo "... rebuild_cache"
+	@echo "... particles_lib"
 	@echo "... edit_cache"
-	@echo "... fluids"
-	@echo "... fluids_lib"
+	@echo "... particles_copy_resources"
+	@echo "... particles"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

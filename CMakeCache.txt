@@ -144,7 +144,7 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 CMAKE_OSX_SYSROOT:STRING=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=fluids
+CMAKE_PROJECT_NAME:STATIC=particles
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -279,6 +279,15 @@ libglew_static_LIB_DEPENDS:STATIC=general;/Applications/Xcode.app/Contents/Devel
 
 //Dependencies for the target
 libglewmx_static_LIB_DEPENDS:STATIC=general;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework;general;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AGL.framework;
+
+//Value Computed by CMake
+particles_BINARY_DIR:STATIC=/Users/KnoxTYS/desktop/SPH-Fluids
+
+//Value Computed by CMake
+particles_SOURCE_DIR:STATIC=/Users/KnoxTYS/desktop/SPH-Fluids
+
+//Dependencies for the target
+particles_lib_LIB_DEPENDS:STATIC=general;libglew_static;general;glfw;
 
 
 ########################
@@ -427,5 +436,5 @@ VULKAN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VULKAN_STATIC_LIBRARY
 VULKAN_STATIC_LIBRARY-ADVANCED:INTERNAL=1
 //Project Library
-project_LIB:INTERNAL=fluids_lib
+project_LIB:INTERNAL=particles_lib
 

@@ -69,7 +69,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "lib/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "lib/glew/CMakeFiles/libglewmx_static.dir/DependInfo.cmake"
   "lib/glew/CMakeFiles/libglew_static.dir/DependInfo.cmake"
-  "src/CMakeFiles/fluids_copy_resources.dir/DependInfo.cmake"
-  "src/CMakeFiles/fluids.dir/DependInfo.cmake"
-  "src/CMakeFiles/fluids_lib.dir/DependInfo.cmake"
+  "src/CMakeFiles/particles_lib.dir/DependInfo.cmake"
+  "src/CMakeFiles/particles_copy_resources.dir/DependInfo.cmake"
+  "src/CMakeFiles/particles.dir/DependInfo.cmake"
   )

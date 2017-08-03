@@ -196,43 +196,43 @@ libglew_static/fast:
 .PHONY : libglew_static/fast
 
 #=============================================================================
-# Target rules for targets named fluids_copy_resources
+# Target rules for targets named particles_lib
 
 # Build rule for target.
-fluids_copy_resources: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fluids_copy_resources
-.PHONY : fluids_copy_resources
+particles_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 particles_lib
+.PHONY : particles_lib
 
 # fast build rule for target.
-fluids_copy_resources/fast:
-	$(MAKE) -f src/CMakeFiles/fluids_copy_resources.dir/build.make src/CMakeFiles/fluids_copy_resources.dir/build
-.PHONY : fluids_copy_resources/fast
+particles_lib/fast:
+	$(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/build
+.PHONY : particles_lib/fast
 
 #=============================================================================
-# Target rules for targets named fluids
+# Target rules for targets named particles_copy_resources
 
 # Build rule for target.
-fluids: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fluids
-.PHONY : fluids
+particles_copy_resources: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 particles_copy_resources
+.PHONY : particles_copy_resources
 
 # fast build rule for target.
-fluids/fast:
-	$(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/build
-.PHONY : fluids/fast
+particles_copy_resources/fast:
+	$(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/build
+.PHONY : particles_copy_resources/fast
 
 #=============================================================================
-# Target rules for targets named fluids_lib
+# Target rules for targets named particles
 
 # Build rule for target.
-fluids_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fluids_lib
-.PHONY : fluids_lib
+particles: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 particles
+.PHONY : particles
 
 # fast build rule for target.
-fluids_lib/fast:
-	$(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/build
-.PHONY : fluids_lib/fast
+particles/fast:
+	$(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/build
+.PHONY : particles/fast
 
 # Help Target
 help:
@@ -249,9 +249,9 @@ help:
 	@echo "... glfw"
 	@echo "... libglewmx_static"
 	@echo "... libglew_static"
-	@echo "... fluids_copy_resources"
-	@echo "... fluids"
-	@echo "... fluids_lib"
+	@echo "... particles_lib"
+	@echo "... particles_copy_resources"
+	@echo "... particles"
 .PHONY : help
 
 

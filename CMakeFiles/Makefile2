@@ -102,7 +102,7 @@ lib/glfw/src/preinstall:
 lib/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target glfw"
 .PHONY : lib/glfw/src/CMakeFiles/glfw.dir/all
 
 # Include target in all.
@@ -159,7 +159,7 @@ lib/glew/preinstall:
 lib/glew/CMakeFiles/libglewmx_static.dir/all:
 	$(MAKE) -f lib/glew/CMakeFiles/libglewmx_static.dir/build.make lib/glew/CMakeFiles/libglewmx_static.dir/depend
 	$(MAKE) -f lib/glew/CMakeFiles/libglewmx_static.dir/build.make lib/glew/CMakeFiles/libglewmx_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=24,25 "Built target libglewmx_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=19,20 "Built target libglewmx_static"
 .PHONY : lib/glew/CMakeFiles/libglewmx_static.dir/all
 
 # Include target in all.
@@ -196,7 +196,7 @@ clean: lib/glew/CMakeFiles/libglewmx_static.dir/clean
 lib/glew/CMakeFiles/libglew_static.dir/all:
 	$(MAKE) -f lib/glew/CMakeFiles/libglew_static.dir/build.make lib/glew/CMakeFiles/libglew_static.dir/depend
 	$(MAKE) -f lib/glew/CMakeFiles/libglew_static.dir/build.make lib/glew/CMakeFiles/libglew_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=22,23 "Built target libglew_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=17,18 "Built target libglew_static"
 .PHONY : lib/glew/CMakeFiles/libglew_static.dir/all
 
 # Include target in all.
@@ -230,16 +230,16 @@ clean: lib/glew/CMakeFiles/libglew_static.dir/clean
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
-src/all: src/CMakeFiles/fluids_copy_resources.dir/all
-src/all: src/CMakeFiles/fluids.dir/all
-src/all: src/CMakeFiles/fluids_lib.dir/all
+src/all: src/CMakeFiles/particles_lib.dir/all
+src/all: src/CMakeFiles/particles_copy_resources.dir/all
+src/all: src/CMakeFiles/particles.dir/all
 
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
-src/clean: src/CMakeFiles/fluids_copy_resources.dir/clean
-src/clean: src/CMakeFiles/fluids.dir/clean
-src/clean: src/CMakeFiles/fluids_lib.dir/clean
+src/clean: src/CMakeFiles/particles_lib.dir/clean
+src/clean: src/CMakeFiles/particles_copy_resources.dir/clean
+src/clean: src/CMakeFiles/particles.dir/clean
 
 .PHONY : src/clean
 
@@ -249,117 +249,117 @@ src/preinstall:
 .PHONY : src/preinstall
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/fluids_copy_resources.dir
+# Target rules for target src/CMakeFiles/particles_lib.dir
 
 # All Build rule for target.
-src/CMakeFiles/fluids_copy_resources.dir/all:
-	$(MAKE) -f src/CMakeFiles/fluids_copy_resources.dir/build.make src/CMakeFiles/fluids_copy_resources.dir/depend
-	$(MAKE) -f src/CMakeFiles/fluids_copy_resources.dir/build.make src/CMakeFiles/fluids_copy_resources.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=3 "Built target fluids_copy_resources"
-.PHONY : src/CMakeFiles/fluids_copy_resources.dir/all
+src/CMakeFiles/particles_lib.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
+src/CMakeFiles/particles_lib.dir/all: lib/glew/CMakeFiles/libglew_static.dir/all
+	$(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/depend
+	$(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=24,25 "Built target particles_lib"
+.PHONY : src/CMakeFiles/particles_lib.dir/all
 
 # Include target in all.
-all: src/CMakeFiles/fluids_copy_resources.dir/all
+all: src/CMakeFiles/particles_lib.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/fluids_copy_resources.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids_copy_resources.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
-.PHONY : src/CMakeFiles/fluids_copy_resources.dir/rule
-
-# Convenience name for target.
-fluids_copy_resources: src/CMakeFiles/fluids_copy_resources.dir/rule
-
-.PHONY : fluids_copy_resources
-
-# clean rule for target.
-src/CMakeFiles/fluids_copy_resources.dir/clean:
-	$(MAKE) -f src/CMakeFiles/fluids_copy_resources.dir/build.make src/CMakeFiles/fluids_copy_resources.dir/clean
-.PHONY : src/CMakeFiles/fluids_copy_resources.dir/clean
-
-# clean rule for target.
-clean: src/CMakeFiles/fluids_copy_resources.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/fluids.dir
-
-# All Build rule for target.
-src/CMakeFiles/fluids.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
-src/CMakeFiles/fluids.dir/all: lib/glew/CMakeFiles/libglew_static.dir/all
-src/CMakeFiles/fluids.dir/all: src/CMakeFiles/fluids_copy_resources.dir/all
-src/CMakeFiles/fluids.dir/all: src/CMakeFiles/fluids_lib.dir/all
-	$(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/depend
-	$(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=1,2 "Built target fluids"
-.PHONY : src/CMakeFiles/fluids.dir/all
-
-# Include target in all.
-all: src/CMakeFiles/fluids.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/CMakeFiles/fluids.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 23
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
-.PHONY : src/CMakeFiles/fluids.dir/rule
-
-# Convenience name for target.
-fluids: src/CMakeFiles/fluids.dir/rule
-
-.PHONY : fluids
-
-# clean rule for target.
-src/CMakeFiles/fluids.dir/clean:
-	$(MAKE) -f src/CMakeFiles/fluids.dir/build.make src/CMakeFiles/fluids.dir/clean
-.PHONY : src/CMakeFiles/fluids.dir/clean
-
-# clean rule for target.
-clean: src/CMakeFiles/fluids.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/fluids_lib.dir
-
-# All Build rule for target.
-src/CMakeFiles/fluids_lib.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
-src/CMakeFiles/fluids_lib.dir/all: lib/glew/CMakeFiles/libglew_static.dir/all
-	$(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/depend
-	$(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=4,5 "Built target fluids_lib"
-.PHONY : src/CMakeFiles/fluids_lib.dir/all
-
-# Include target in all.
-all: src/CMakeFiles/fluids_lib.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/CMakeFiles/fluids_lib.dir/rule: cmake_check_build_system
+src/CMakeFiles/particles_lib.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 20
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/fluids_lib.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
-.PHONY : src/CMakeFiles/fluids_lib.dir/rule
+.PHONY : src/CMakeFiles/particles_lib.dir/rule
 
 # Convenience name for target.
-fluids_lib: src/CMakeFiles/fluids_lib.dir/rule
+particles_lib: src/CMakeFiles/particles_lib.dir/rule
 
-.PHONY : fluids_lib
-
-# clean rule for target.
-src/CMakeFiles/fluids_lib.dir/clean:
-	$(MAKE) -f src/CMakeFiles/fluids_lib.dir/build.make src/CMakeFiles/fluids_lib.dir/clean
-.PHONY : src/CMakeFiles/fluids_lib.dir/clean
+.PHONY : particles_lib
 
 # clean rule for target.
-clean: src/CMakeFiles/fluids_lib.dir/clean
+src/CMakeFiles/particles_lib.dir/clean:
+	$(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/clean
+.PHONY : src/CMakeFiles/particles_lib.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/particles_lib.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/particles_copy_resources.dir
+
+# All Build rule for target.
+src/CMakeFiles/particles_copy_resources.dir/all:
+	$(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/depend
+	$(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=23 "Built target particles_copy_resources"
+.PHONY : src/CMakeFiles/particles_copy_resources.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/particles_copy_resources.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/particles_copy_resources.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_copy_resources.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+.PHONY : src/CMakeFiles/particles_copy_resources.dir/rule
+
+# Convenience name for target.
+particles_copy_resources: src/CMakeFiles/particles_copy_resources.dir/rule
+
+.PHONY : particles_copy_resources
+
+# clean rule for target.
+src/CMakeFiles/particles_copy_resources.dir/clean:
+	$(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/clean
+.PHONY : src/CMakeFiles/particles_copy_resources.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/particles_copy_resources.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/particles.dir
+
+# All Build rule for target.
+src/CMakeFiles/particles.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
+src/CMakeFiles/particles.dir/all: lib/glew/CMakeFiles/libglew_static.dir/all
+src/CMakeFiles/particles.dir/all: src/CMakeFiles/particles_lib.dir/all
+src/CMakeFiles/particles.dir/all: src/CMakeFiles/particles_copy_resources.dir/all
+	$(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/depend
+	$(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=21,22 "Built target particles"
+.PHONY : src/CMakeFiles/particles.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/particles.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/particles.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 23
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+.PHONY : src/CMakeFiles/particles.dir/rule
+
+# Convenience name for target.
+particles: src/CMakeFiles/particles.dir/rule
+
+.PHONY : particles
+
+# clean rule for target.
+src/CMakeFiles/particles.dir/clean:
+	$(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/clean
+.PHONY : src/CMakeFiles/particles.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/particles.dir/clean
 
 .PHONY : clean
 
