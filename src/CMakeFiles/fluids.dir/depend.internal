@@ -6,6 +6,7 @@ src/CMakeFiles/fluids.dir/main.cpp.o
  /Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.h
  /Users/KnoxTYS/desktop/SPH-Fluids/src/Shader.h
  /Users/KnoxTYS/desktop/SPH-Fluids/src/main.cpp
+ /Users/KnoxTYS/desktop/SPH-Fluids/src/stb_image.h
  lib/glew/include/GL/glew.h
  lib/glfw/include/GLFW/glfw3.h
  lib/glm/glm/common.hpp

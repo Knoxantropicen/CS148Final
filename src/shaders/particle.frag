@@ -4,10 +4,10 @@ in vec3 objectColor;
 
 out vec4 color;
 
-//uniform vec3 objectColor;
+uniform sampler2D tex;
 
 void main()
 {
-    color = vec4(objectColor, 1.0f);
-    //color = vec4(1.0f, 1.0f, 1.0f, 1.0f);
+    //color = texture(tex, gl_PointCoord) * vec4(objectColor, 1.0f);
+    color = texture(tex, gl_PointCoord);
 }

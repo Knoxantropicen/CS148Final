@@ -5,6 +5,7 @@ src/CMakeFiles/fluids.dir/main.cpp.o: src/Camera.h
 src/CMakeFiles/fluids.dir/main.cpp.o: src/FluidSystem.h
 src/CMakeFiles/fluids.dir/main.cpp.o: src/Shader.h
 src/CMakeFiles/fluids.dir/main.cpp.o: src/main.cpp
+src/CMakeFiles/fluids.dir/main.cpp.o: src/stb_image.h
 src/CMakeFiles/fluids.dir/main.cpp.o: lib/glew/include/GL/glew.h
 src/CMakeFiles/fluids.dir/main.cpp.o: lib/glfw/include/GLFW/glfw3.h
 src/CMakeFiles/fluids.dir/main.cpp.o: lib/glm/glm/common.hpp

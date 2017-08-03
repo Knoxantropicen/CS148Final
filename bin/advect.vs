@@ -23,7 +23,7 @@ void main()
 {
 	a = vec3(0.0f, -0.98f, 0.0f);
 
-	xmin = ymin = zmin = -3.0f;
+	xmin = ymin = zmin = -10.0f;
 	xmax = ymax = zmax = 3.0f;
 
 	vVel = Vel + a * dt;

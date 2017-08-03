@@ -16,10 +16,6 @@ glm/glm.hpp
 glm/gtc/matrix_transform.hpp
 -
 
-/Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.cpp
-FluidSystem.h
-/Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.h
-
 /Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.h
 deque
 -
@@ -33,6 +29,8 @@ Camera.h
 /Users/KnoxTYS/desktop/SPH-Fluids/src/Camera.h
 Shader.h
 /Users/KnoxTYS/desktop/SPH-Fluids/src/Shader.h
+stb_image.h
+/Users/KnoxTYS/desktop/SPH-Fluids/src/stb_image.h
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -71,6 +69,36 @@ glm/gtc/random.hpp
 -
 FluidSystem.h
 /Users/KnoxTYS/desktop/SPH-Fluids/src/FluidSystem.h
+
+/Users/KnoxTYS/desktop/SPH-Fluids/src/stb_image.h
+stb_image.h
+/Users/KnoxTYS/desktop/SPH-Fluids/src/stb_image.h
+stdio.h
+-
+stdarg.h
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+math.h
+-
+stdio.h
+-
+assert.h
+-
+stdint.h
+-
+emmintrin.h
+-
+intrin.h
+-
+arm_neon.h
+-
 
 lib/glew/include/GL/glew.h
 stddef.h
