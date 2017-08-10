@@ -44,7 +44,7 @@ GLFWwindow* setupWindow()
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-    GLFWwindow * window = glfwCreateWindow(WIDTH, HEIGHT, "Particle System", nullptr, nullptr);
+    GLFWwindow * window = glfwCreateWindow(WIDTH, HEIGHT, "", nullptr, nullptr);
 
     glfwMakeContextCurrent(window);
     if (window == NULL) {
@@ -147,7 +147,7 @@ void updateFpsCounter(GLFWwindow* window) {
         previous_seconds = current_seconds;
         char tmp[128];
         double fps = (double)frame_count / elapsed_seconds;
-        sprintf(tmp, "Particle System - fps: %.2f", fps);
+        sprintf(tmp, "CS148Final - knoxtys - fps: %.2f", fps);
         glfwSetWindowTitle(window, tmp);
         frame_count = 0;
     }
