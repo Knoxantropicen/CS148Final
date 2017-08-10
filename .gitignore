@@ -35,16 +35,16 @@
 *.DS_Store
 
 # Generated files
-/CmakeFiles
-/CMakeCache.txt
-/cmake_install.cmake
-/Makefile
-/LICENSE
-/src/cmake_install.cmake
-/src/CMakeFiles
-/src/CMakeLists.txt
-/src/Makefile
+CmakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+LICENSE
+src/cmake_install.cmake
+src/CMakeFiles/
+src/CMakeLists.txt
+src/Makefile
 
 # Project related files
-/bin
+bin/
 
