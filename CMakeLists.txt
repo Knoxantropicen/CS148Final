@@ -36,7 +36,7 @@ INCLUDE_DIRECTORIES("${MAINFOLDER}/include")
 if(WIN32)
 
 else()
-    SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -Wextra -Werror -Wfloat-equal -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-pessimizing-move")
+    SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -Wextra -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-pessimizing-move")
     if(APPLE)
     elseif(UNIX)
         add_definitions(-DGLEW_EGL)
@@ -67,6 +67,12 @@ SET(GLEW_INCLUDE_PATH "${MAINFOLDER}/lib/glew/include")
 # glm
 #
 SET(GLM_INCLUDE_PATH "${MAINFOLDER}/lib/glm")
+
+#
+# assimp
+#
+SET(ASSIMP_INCLUDE_PATH "${MAINFOLDER}/lib/assimp/include")
+ADD_SUBDIRECTORY(lib/assimp)
 
 #
 # Add project sources

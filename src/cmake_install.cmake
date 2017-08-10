@@ -1,4 +1,4 @@
-# Install script for directory: /Users/KnoxTYS/desktop/SPH-Fluids/src
+# Install script for directory: /Users/KnoxTYS/desktop/RunningFlame/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

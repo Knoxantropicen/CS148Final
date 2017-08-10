@@ -11,7 +11,10 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/random.hpp>
 
+#include "ResourceManager.h"
 #include "ParticleSystem.h"
+#include "ModelSystem.h"
+#include "Skybox.h"
 
 using namespace std;
 
@@ -29,6 +32,8 @@ double previous_seconds = 0;
 int frame_count = 0;
 
 ParticleSystem * particleSystem;
+ModelSystem * modelSystem;
+Skybox * skybox;
 
 GLFWwindow* setupWindow() 
 {
@@ -60,6 +65,10 @@ GLFWwindow* setupWindow()
     glEnable(GL_POINT_SPRITE);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_DEPTH_TEST);
+    // glEnable(GL_CULL_FACE);
+    // glCullFace(GL_BACK);
+    // glFrontFace(GL_CCW);
 
     return window;
 }
@@ -75,7 +84,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
         glfwSetWindowShouldClose(window, GL_TRUE);
     }
     if (key == GLFW_KEY_P && action == GLFW_RELEASE) {
-        if (particleSystem) particleSystem->m_system_stop = !particleSystem->m_system_stop;
+        RM::getInstance().ctrl->system_stop = !RM::getInstance().ctrl->system_stop;
     }
 
     if (action == GLFW_PRESS) {
@@ -99,35 +108,33 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
     lastX = xpos;
     lastY = ypos;
 
-    particleSystem->m_camera->ProcessMouseMovement(xoffset, yoffset);
+    RM::getInstance().camera->ProcessMouseMovement(xoffset, yoffset);
 }
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
-    particleSystem->m_camera->ProcessMouseScroll(yoffset);
+    RM::getInstance().camera->ProcessMouseScroll(yoffset);
 }
 
 void handleInput() {
 	glfwPollEvents();
 
-	if (!particleSystem || !particleSystem->m_camera) {
-        return;
-    }
+    if (keys[GLFW_KEY_W]) RM::getInstance().camera->ProcessKeyboard(FORWARD, delta_time);
+    if (keys[GLFW_KEY_S]) RM::getInstance().camera->ProcessKeyboard(BACKWARD, delta_time);
+    if (keys[GLFW_KEY_A]) RM::getInstance().camera->ProcessKeyboard(LEFT, delta_time);
+    if (keys[GLFW_KEY_D]) RM::getInstance().camera->ProcessKeyboard(RIGHT, delta_time);
 
-    if (keys[GLFW_KEY_W]) particleSystem->m_camera->ProcessKeyboard(FORWARD, delta_time);
-    if (keys[GLFW_KEY_S]) particleSystem->m_camera->ProcessKeyboard(BACKWARD, delta_time);
-    if (keys[GLFW_KEY_A]) particleSystem->m_camera->ProcessKeyboard(LEFT, delta_time);
-    if (keys[GLFW_KEY_D]) particleSystem->m_camera->ProcessKeyboard(RIGHT, delta_time);
-
-    if (keys[GLFW_KEY_I]) particleSystem->m_z -= 0.1f;
-    if (keys[GLFW_KEY_K]) particleSystem->m_z += 0.1f;
-    if (keys[GLFW_KEY_J]) particleSystem->m_x -= 0.1f;
-    if (keys[GLFW_KEY_L]) particleSystem->m_x += 0.1f;
+    if (keys[GLFW_KEY_I]) RM::getInstance().ctrl->z -= 0.1f;
+    if (keys[GLFW_KEY_K]) RM::getInstance().ctrl->z += 0.1f;
+    // if (keys[GLFW_KEY_J]) RM::getInstance().ctrl->x -= 0.1f;
+    // if (keys[GLFW_KEY_L]) RM::getInstance().ctrl->x += 0.1f;
+    if (keys[GLFW_KEY_J]) RM::getInstance().ctrl->a -= M_PI / 360;
+    if (keys[GLFW_KEY_L]) RM::getInstance().ctrl->a += M_PI / 360;
 }
 
 void cleanup() {
 	glfwTerminate();
-
 	if (particleSystem) delete particleSystem;
+    if (modelSystem) delete modelSystem;
 }
 
 
@@ -152,6 +159,8 @@ int main() {
 	setupInputHandlers(window);
 
 	particleSystem = new ParticleSystem(window);
+    modelSystem = new ModelSystem(window);
+    skybox = new Skybox(window);
 
 	last_time = glfwGetTime();
 
@@ -163,9 +172,15 @@ int main() {
 		curr_time = glfwGetTime();
 		delta_time = curr_time - last_time;
 
+        glClearColor(0.08f, 0.08f, 0.16f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        skybox->advance();
         particleSystem->advance(delta_time);
+        modelSystem->advance();
 
 		last_time = curr_time;
+
+        glfwSwapBuffers(window);
 	}
 
 	cleanup();

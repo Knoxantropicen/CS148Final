@@ -54,10 +54,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
+CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/RunningFlame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
+CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/RunningFlame
 
 #=============================================================================
 # Directory level rules for directory lib/glfw
@@ -102,7 +102,7 @@ lib/glfw/src/preinstall:
 lib/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num=67,68,69,70,71,72 "Built target glfw"
 .PHONY : lib/glfw/src/CMakeFiles/glfw.dir/all
 
 # Include target in all.
@@ -112,9 +112,9 @@ all: lib/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 lib/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 lib/glfw/src/CMakeFiles/glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 .PHONY : lib/glfw/src/CMakeFiles/glfw.dir/rule
 
 # Convenience name for target.
@@ -159,7 +159,7 @@ lib/glew/preinstall:
 lib/glew/CMakeFiles/libglewmx_static.dir/all:
 	$(MAKE) -f lib/glew/CMakeFiles/libglewmx_static.dir/build.make lib/glew/CMakeFiles/libglewmx_static.dir/depend
 	$(MAKE) -f lib/glew/CMakeFiles/libglewmx_static.dir/build.make lib/glew/CMakeFiles/libglewmx_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=19,20 "Built target libglewmx_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num=73 "Built target libglewmx_static"
 .PHONY : lib/glew/CMakeFiles/libglewmx_static.dir/all
 
 # Include target in all.
@@ -169,9 +169,9 @@ all: lib/glew/CMakeFiles/libglewmx_static.dir/all
 
 # Build rule for subdir invocation for target.
 lib/glew/CMakeFiles/libglewmx_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 lib/glew/CMakeFiles/libglewmx_static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 .PHONY : lib/glew/CMakeFiles/libglewmx_static.dir/rule
 
 # Convenience name for target.
@@ -196,7 +196,7 @@ clean: lib/glew/CMakeFiles/libglewmx_static.dir/clean
 lib/glew/CMakeFiles/libglew_static.dir/all:
 	$(MAKE) -f lib/glew/CMakeFiles/libglew_static.dir/build.make lib/glew/CMakeFiles/libglew_static.dir/depend
 	$(MAKE) -f lib/glew/CMakeFiles/libglew_static.dir/build.make lib/glew/CMakeFiles/libglew_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=17,18 "Built target libglew_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target libglew_static"
 .PHONY : lib/glew/CMakeFiles/libglew_static.dir/all
 
 # Include target in all.
@@ -206,9 +206,9 @@ all: lib/glew/CMakeFiles/libglew_static.dir/all
 
 # Build rule for subdir invocation for target.
 lib/glew/CMakeFiles/libglew_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 lib/glew/CMakeFiles/libglew_static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 .PHONY : lib/glew/CMakeFiles/libglew_static.dir/rule
 
 # Convenience name for target.
@@ -225,6 +225,1250 @@ lib/glew/CMakeFiles/libglew_static.dir/clean:
 clean: lib/glew/CMakeFiles/libglew_static.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/assimp
+
+# Convenience name for "all" pass in the directory.
+lib/assimp/all: lib/assimp/contrib/all
+lib/assimp/all: lib/assimp/code/all
+lib/assimp/all: lib/assimp/tools/assimp_cmd/all
+lib/assimp/all: lib/assimp/test/all
+
+.PHONY : lib/assimp/all
+
+# Convenience name for "clean" pass in the directory.
+lib/assimp/clean: lib/assimp/CMakeFiles/uninstall.dir/clean
+lib/assimp/clean: lib/assimp/contrib/clean
+lib/assimp/clean: lib/assimp/code/clean
+lib/assimp/clean: lib/assimp/tools/assimp_cmd/clean
+lib/assimp/clean: lib/assimp/test/clean
+
+.PHONY : lib/assimp/clean
+
+# Convenience name for "preinstall" pass in the directory.
+lib/assimp/preinstall: lib/assimp/contrib/preinstall
+lib/assimp/preinstall: lib/assimp/code/preinstall
+lib/assimp/preinstall: lib/assimp/tools/assimp_cmd/preinstall
+lib/assimp/preinstall: lib/assimp/test/preinstall
+
+.PHONY : lib/assimp/preinstall
+
+#=============================================================================
+# Target rules for target lib/assimp/CMakeFiles/uninstall.dir
+
+# All Build rule for target.
+lib/assimp/CMakeFiles/uninstall.dir/all:
+	$(MAKE) -f lib/assimp/CMakeFiles/uninstall.dir/build.make lib/assimp/CMakeFiles/uninstall.dir/depend
+	$(MAKE) -f lib/assimp/CMakeFiles/uninstall.dir/build.make lib/assimp/CMakeFiles/uninstall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target uninstall"
+.PHONY : lib/assimp/CMakeFiles/uninstall.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/CMakeFiles/uninstall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/CMakeFiles/uninstall.dir/rule
+
+# Convenience name for target.
+uninstall: lib/assimp/CMakeFiles/uninstall.dir/rule
+
+.PHONY : uninstall
+
+# clean rule for target.
+lib/assimp/CMakeFiles/uninstall.dir/clean:
+	$(MAKE) -f lib/assimp/CMakeFiles/uninstall.dir/build.make lib/assimp/CMakeFiles/uninstall.dir/clean
+.PHONY : lib/assimp/CMakeFiles/uninstall.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/CMakeFiles/uninstall.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/assimp/contrib
+
+# Convenience name for "all" pass in the directory.
+lib/assimp/contrib/all: lib/assimp/contrib/irrXML/all
+
+.PHONY : lib/assimp/contrib/all
+
+# Convenience name for "clean" pass in the directory.
+lib/assimp/contrib/clean: lib/assimp/contrib/irrXML/clean
+
+.PHONY : lib/assimp/contrib/clean
+
+# Convenience name for "preinstall" pass in the directory.
+lib/assimp/contrib/preinstall: lib/assimp/contrib/irrXML/preinstall
+
+.PHONY : lib/assimp/contrib/preinstall
+
+#=============================================================================
+# Directory level rules for directory lib/assimp/contrib/irrXML
+
+# Convenience name for "all" pass in the directory.
+lib/assimp/contrib/irrXML/all: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+
+.PHONY : lib/assimp/contrib/irrXML/all
+
+# Convenience name for "clean" pass in the directory.
+lib/assimp/contrib/irrXML/clean: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean
+
+.PHONY : lib/assimp/contrib/irrXML/clean
+
+# Convenience name for "preinstall" pass in the directory.
+lib/assimp/contrib/irrXML/preinstall:
+
+.PHONY : lib/assimp/contrib/irrXML/preinstall
+
+#=============================================================================
+# Target rules for target lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir
+
+# All Build rule for target.
+lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all:
+	$(MAKE) -f lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/depend
+	$(MAKE) -f lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target IrrXML"
+.PHONY : lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+
+# Include target in all.
+all: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/rule
+
+# Convenience name for target.
+IrrXML: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/rule
+
+.PHONY : IrrXML
+
+# clean rule for target.
+lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean:
+	$(MAKE) -f lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean
+.PHONY : lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/assimp/code
+
+# Convenience name for "all" pass in the directory.
+lib/assimp/code/all: lib/assimp/code/CMakeFiles/assimp.dir/all
+
+.PHONY : lib/assimp/code/all
+
+# Convenience name for "clean" pass in the directory.
+lib/assimp/code/clean: lib/assimp/code/CMakeFiles/assimp.dir/clean
+
+.PHONY : lib/assimp/code/clean
+
+# Convenience name for "preinstall" pass in the directory.
+lib/assimp/code/preinstall:
+
+.PHONY : lib/assimp/code/preinstall
+
+#=============================================================================
+# Target rules for target lib/assimp/code/CMakeFiles/assimp.dir
+
+# All Build rule for target.
+lib/assimp/code/CMakeFiles/assimp.dir/all: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+	$(MAKE) -f lib/assimp/code/CMakeFiles/assimp.dir/build.make lib/assimp/code/CMakeFiles/assimp.dir/depend
+	$(MAKE) -f lib/assimp/code/CMakeFiles/assimp.dir/build.make lib/assimp/code/CMakeFiles/assimp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64 "Built target assimp"
+.PHONY : lib/assimp/code/CMakeFiles/assimp.dir/all
+
+# Include target in all.
+all: lib/assimp/code/CMakeFiles/assimp.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+lib/assimp/code/CMakeFiles/assimp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 64
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/code/CMakeFiles/assimp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/code/CMakeFiles/assimp.dir/rule
+
+# Convenience name for target.
+assimp: lib/assimp/code/CMakeFiles/assimp.dir/rule
+
+.PHONY : assimp
+
+# clean rule for target.
+lib/assimp/code/CMakeFiles/assimp.dir/clean:
+	$(MAKE) -f lib/assimp/code/CMakeFiles/assimp.dir/build.make lib/assimp/code/CMakeFiles/assimp.dir/clean
+.PHONY : lib/assimp/code/CMakeFiles/assimp.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/code/CMakeFiles/assimp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/assimp/tools/assimp_cmd
+
+# Convenience name for "all" pass in the directory.
+lib/assimp/tools/assimp_cmd/all: lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
+
+.PHONY : lib/assimp/tools/assimp_cmd/all
+
+# Convenience name for "clean" pass in the directory.
+lib/assimp/tools/assimp_cmd/clean: lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean
+
+.PHONY : lib/assimp/tools/assimp_cmd/clean
+
+# Convenience name for "preinstall" pass in the directory.
+lib/assimp/tools/assimp_cmd/preinstall:
+
+.PHONY : lib/assimp/tools/assimp_cmd/preinstall
+
+#=============================================================================
+# Target rules for target lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir
+
+# All Build rule for target.
+lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all: lib/assimp/code/CMakeFiles/assimp.dir/all
+	$(MAKE) -f lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/depend
+	$(MAKE) -f lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num=65,66 "Built target assimp_cmd"
+.PHONY : lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
+
+# Include target in all.
+all: lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 66
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/rule
+
+# Convenience name for target.
+assimp_cmd: lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/rule
+
+.PHONY : assimp_cmd
+
+# clean rule for target.
+lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean:
+	$(MAKE) -f lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean
+.PHONY : lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/assimp/test
+
+# Convenience name for "all" pass in the directory.
+lib/assimp/test/all: lib/assimp/test/CMakeFiles/unit.dir/all
+lib/assimp/test/all: lib/assimp/test/headercheck/all
+
+.PHONY : lib/assimp/test/all
+
+# Convenience name for "clean" pass in the directory.
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/unit.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ContinuousTest.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ContinuousBuild.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ContinuousStart.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ExperimentalStart.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ExperimentalTest.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlySubmit.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlyCoverage.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlyTest.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlyBuild.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlyConfigure.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlyUpdate.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/Nightly.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/NightlyStart.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/Continuous.dir/clean
+lib/assimp/test/clean: lib/assimp/test/CMakeFiles/Experimental.dir/clean
+lib/assimp/test/clean: lib/assimp/test/headercheck/clean
+
+.PHONY : lib/assimp/test/clean
+
+# Convenience name for "preinstall" pass in the directory.
+lib/assimp/test/preinstall: lib/assimp/test/headercheck/preinstall
+
+.PHONY : lib/assimp/test/preinstall
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/unit.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/unit.dir/all: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+lib/assimp/test/CMakeFiles/unit.dir/all: lib/assimp/code/CMakeFiles/assimp.dir/all
+	$(MAKE) -f lib/assimp/test/CMakeFiles/unit.dir/build.make lib/assimp/test/CMakeFiles/unit.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/unit.dir/build.make lib/assimp/test/CMakeFiles/unit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num=76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target unit"
+.PHONY : lib/assimp/test/CMakeFiles/unit.dir/all
+
+# Include target in all.
+all: lib/assimp/test/CMakeFiles/unit.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/unit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 89
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/unit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/unit.dir/rule
+
+# Convenience name for target.
+unit: lib/assimp/test/CMakeFiles/unit.dir/rule
+
+.PHONY : unit
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/unit.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/unit.dir/build.make lib/assimp/test/CMakeFiles/unit.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/unit.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/unit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ContinuousCoverage.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/build.make lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/build.make lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ContinuousCoverage"
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/rule
+
+# Convenience name for target.
+ContinuousCoverage: lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/rule
+
+.PHONY : ContinuousCoverage
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/build.make lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ContinuousTest.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ContinuousTest.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousTest.dir/build.make lib/assimp/test/CMakeFiles/ContinuousTest.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousTest.dir/build.make lib/assimp/test/CMakeFiles/ContinuousTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ContinuousTest"
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousTest.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ContinuousTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ContinuousTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousTest.dir/rule
+
+# Convenience name for target.
+ContinuousTest: lib/assimp/test/CMakeFiles/ContinuousTest.dir/rule
+
+.PHONY : ContinuousTest
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ContinuousTest.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousTest.dir/build.make lib/assimp/test/CMakeFiles/ContinuousTest.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousTest.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ContinuousTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ContinuousBuild.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ContinuousBuild.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousBuild.dir/build.make lib/assimp/test/CMakeFiles/ContinuousBuild.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousBuild.dir/build.make lib/assimp/test/CMakeFiles/ContinuousBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ContinuousBuild"
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousBuild.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ContinuousBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ContinuousBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousBuild.dir/rule
+
+# Convenience name for target.
+ContinuousBuild: lib/assimp/test/CMakeFiles/ContinuousBuild.dir/rule
+
+.PHONY : ContinuousBuild
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ContinuousBuild.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousBuild.dir/build.make lib/assimp/test/CMakeFiles/ContinuousBuild.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousBuild.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ContinuousBuild.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ContinuousStart.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ContinuousStart.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousStart.dir/build.make lib/assimp/test/CMakeFiles/ContinuousStart.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousStart.dir/build.make lib/assimp/test/CMakeFiles/ContinuousStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ContinuousStart"
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousStart.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ContinuousStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ContinuousStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousStart.dir/rule
+
+# Convenience name for target.
+ContinuousStart: lib/assimp/test/CMakeFiles/ContinuousStart.dir/rule
+
+.PHONY : ContinuousStart
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ContinuousStart.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousStart.dir/build.make lib/assimp/test/CMakeFiles/ContinuousStart.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousStart.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ContinuousStart.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ExperimentalBuild.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ExperimentalBuild"
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/rule
+
+# Convenience name for target.
+ExperimentalBuild: lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/rule
+
+.PHONY : ExperimentalBuild
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ExperimentalCoverage"
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/rule
+
+# Convenience name for target.
+ExperimentalCoverage: lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/rule
+
+.PHONY : ExperimentalCoverage
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ExperimentalSubmit"
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/rule
+
+# Convenience name for target.
+ExperimentalSubmit: lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/rule
+
+.PHONY : ExperimentalSubmit
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ContinuousUpdate.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/build.make lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/build.make lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ContinuousUpdate"
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/rule
+
+# Convenience name for target.
+ContinuousUpdate: lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/rule
+
+.PHONY : ContinuousUpdate
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/build.make lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ExperimentalUpdate"
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/rule
+
+# Convenience name for target.
+ExperimentalUpdate: lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/rule
+
+.PHONY : ExperimentalUpdate
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ExperimentalStart.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalStart.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalStart.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalStart.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalStart.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ExperimentalStart"
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalStart.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ExperimentalStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ExperimentalStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalStart.dir/rule
+
+# Convenience name for target.
+ExperimentalStart: lib/assimp/test/CMakeFiles/ExperimentalStart.dir/rule
+
+.PHONY : ExperimentalStart
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalStart.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalStart.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalStart.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalStart.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ExperimentalStart.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ContinuousSubmit.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/build.make lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/build.make lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ContinuousSubmit"
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/rule
+
+# Convenience name for target.
+ContinuousSubmit: lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/rule
+
+.PHONY : ContinuousSubmit
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/build.make lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ExperimentalTest.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalTest.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalTest.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalTest.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalTest.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ExperimentalTest"
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalTest.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ExperimentalTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ExperimentalTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalTest.dir/rule
+
+# Convenience name for target.
+ExperimentalTest: lib/assimp/test/CMakeFiles/ExperimentalTest.dir/rule
+
+.PHONY : ExperimentalTest
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalTest.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalTest.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalTest.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalTest.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ExperimentalTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlySubmit.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlySubmit.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlySubmit.dir/build.make lib/assimp/test/CMakeFiles/NightlySubmit.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlySubmit.dir/build.make lib/assimp/test/CMakeFiles/NightlySubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlySubmit"
+.PHONY : lib/assimp/test/CMakeFiles/NightlySubmit.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlySubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlySubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlySubmit.dir/rule
+
+# Convenience name for target.
+NightlySubmit: lib/assimp/test/CMakeFiles/NightlySubmit.dir/rule
+
+.PHONY : NightlySubmit
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlySubmit.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlySubmit.dir/build.make lib/assimp/test/CMakeFiles/NightlySubmit.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlySubmit.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlySubmit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlyMemCheck.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/build.make lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/build.make lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlyMemCheck"
+.PHONY : lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/rule
+
+# Convenience name for target.
+NightlyMemCheck: lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/rule
+
+.PHONY : NightlyMemCheck
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/build.make lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ExperimentalConfigure"
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/rule
+
+# Convenience name for target.
+ExperimentalConfigure: lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/rule
+
+.PHONY : ExperimentalConfigure
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlyCoverage.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlyCoverage.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyCoverage.dir/build.make lib/assimp/test/CMakeFiles/NightlyCoverage.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyCoverage.dir/build.make lib/assimp/test/CMakeFiles/NightlyCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlyCoverage"
+.PHONY : lib/assimp/test/CMakeFiles/NightlyCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlyCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlyCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlyCoverage.dir/rule
+
+# Convenience name for target.
+NightlyCoverage: lib/assimp/test/CMakeFiles/NightlyCoverage.dir/rule
+
+.PHONY : NightlyCoverage
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlyCoverage.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyCoverage.dir/build.make lib/assimp/test/CMakeFiles/NightlyCoverage.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlyCoverage.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlyCoverage.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlyTest.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlyTest.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyTest.dir/build.make lib/assimp/test/CMakeFiles/NightlyTest.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyTest.dir/build.make lib/assimp/test/CMakeFiles/NightlyTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlyTest"
+.PHONY : lib/assimp/test/CMakeFiles/NightlyTest.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlyTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlyTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlyTest.dir/rule
+
+# Convenience name for target.
+NightlyTest: lib/assimp/test/CMakeFiles/NightlyTest.dir/rule
+
+.PHONY : NightlyTest
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlyTest.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyTest.dir/build.make lib/assimp/test/CMakeFiles/NightlyTest.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlyTest.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlyTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/build.make lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/build.make lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ContinuousMemCheck"
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/rule
+
+# Convenience name for target.
+ContinuousMemCheck: lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/rule
+
+.PHONY : ContinuousMemCheck
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/build.make lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlyBuild.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlyBuild.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyBuild.dir/build.make lib/assimp/test/CMakeFiles/NightlyBuild.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyBuild.dir/build.make lib/assimp/test/CMakeFiles/NightlyBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlyBuild"
+.PHONY : lib/assimp/test/CMakeFiles/NightlyBuild.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlyBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlyBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlyBuild.dir/rule
+
+# Convenience name for target.
+NightlyBuild: lib/assimp/test/CMakeFiles/NightlyBuild.dir/rule
+
+.PHONY : NightlyBuild
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlyBuild.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyBuild.dir/build.make lib/assimp/test/CMakeFiles/NightlyBuild.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlyBuild.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlyBuild.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlyConfigure.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlyConfigure.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyConfigure.dir/build.make lib/assimp/test/CMakeFiles/NightlyConfigure.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyConfigure.dir/build.make lib/assimp/test/CMakeFiles/NightlyConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlyConfigure"
+.PHONY : lib/assimp/test/CMakeFiles/NightlyConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlyConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlyConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlyConfigure.dir/rule
+
+# Convenience name for target.
+NightlyConfigure: lib/assimp/test/CMakeFiles/NightlyConfigure.dir/rule
+
+.PHONY : NightlyConfigure
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlyConfigure.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyConfigure.dir/build.make lib/assimp/test/CMakeFiles/NightlyConfigure.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlyConfigure.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlyConfigure.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlyUpdate.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlyUpdate.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyUpdate.dir/build.make lib/assimp/test/CMakeFiles/NightlyUpdate.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyUpdate.dir/build.make lib/assimp/test/CMakeFiles/NightlyUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlyUpdate"
+.PHONY : lib/assimp/test/CMakeFiles/NightlyUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlyUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlyUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlyUpdate.dir/rule
+
+# Convenience name for target.
+NightlyUpdate: lib/assimp/test/CMakeFiles/NightlyUpdate.dir/rule
+
+.PHONY : NightlyUpdate
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlyUpdate.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyUpdate.dir/build.make lib/assimp/test/CMakeFiles/NightlyUpdate.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlyUpdate.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlyUpdate.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/build.make lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/build.make lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlyMemoryCheck"
+.PHONY : lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/rule
+
+# Convenience name for target.
+NightlyMemoryCheck: lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/rule
+
+.PHONY : NightlyMemoryCheck
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/build.make lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ContinuousConfigure.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/build.make lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/build.make lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ContinuousConfigure"
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/rule
+
+# Convenience name for target.
+ContinuousConfigure: lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/rule
+
+.PHONY : ContinuousConfigure
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/build.make lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/Nightly.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/Nightly.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Nightly.dir/build.make lib/assimp/test/CMakeFiles/Nightly.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Nightly.dir/build.make lib/assimp/test/CMakeFiles/Nightly.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target Nightly"
+.PHONY : lib/assimp/test/CMakeFiles/Nightly.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/Nightly.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/Nightly.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/Nightly.dir/rule
+
+# Convenience name for target.
+Nightly: lib/assimp/test/CMakeFiles/Nightly.dir/rule
+
+.PHONY : Nightly
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/Nightly.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Nightly.dir/build.make lib/assimp/test/CMakeFiles/Nightly.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/Nightly.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/Nightly.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/NightlyStart.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/NightlyStart.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyStart.dir/build.make lib/assimp/test/CMakeFiles/NightlyStart.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyStart.dir/build.make lib/assimp/test/CMakeFiles/NightlyStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target NightlyStart"
+.PHONY : lib/assimp/test/CMakeFiles/NightlyStart.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/NightlyStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/NightlyStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/NightlyStart.dir/rule
+
+# Convenience name for target.
+NightlyStart: lib/assimp/test/CMakeFiles/NightlyStart.dir/rule
+
+.PHONY : NightlyStart
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/NightlyStart.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/NightlyStart.dir/build.make lib/assimp/test/CMakeFiles/NightlyStart.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/NightlyStart.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/NightlyStart.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target ExperimentalMemCheck"
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/rule
+
+# Convenience name for target.
+ExperimentalMemCheck: lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/rule
+
+.PHONY : ExperimentalMemCheck
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/build.make lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/Continuous.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/Continuous.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Continuous.dir/build.make lib/assimp/test/CMakeFiles/Continuous.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Continuous.dir/build.make lib/assimp/test/CMakeFiles/Continuous.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target Continuous"
+.PHONY : lib/assimp/test/CMakeFiles/Continuous.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/Continuous.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/Continuous.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/Continuous.dir/rule
+
+# Convenience name for target.
+Continuous: lib/assimp/test/CMakeFiles/Continuous.dir/rule
+
+.PHONY : Continuous
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/Continuous.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Continuous.dir/build.make lib/assimp/test/CMakeFiles/Continuous.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/Continuous.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/Continuous.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target lib/assimp/test/CMakeFiles/Experimental.dir
+
+# All Build rule for target.
+lib/assimp/test/CMakeFiles/Experimental.dir/all:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Experimental.dir/build.make lib/assimp/test/CMakeFiles/Experimental.dir/depend
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Experimental.dir/build.make lib/assimp/test/CMakeFiles/Experimental.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target Experimental"
+.PHONY : lib/assimp/test/CMakeFiles/Experimental.dir/all
+
+# Build rule for subdir invocation for target.
+lib/assimp/test/CMakeFiles/Experimental.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 lib/assimp/test/CMakeFiles/Experimental.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
+.PHONY : lib/assimp/test/CMakeFiles/Experimental.dir/rule
+
+# Convenience name for target.
+Experimental: lib/assimp/test/CMakeFiles/Experimental.dir/rule
+
+.PHONY : Experimental
+
+# clean rule for target.
+lib/assimp/test/CMakeFiles/Experimental.dir/clean:
+	$(MAKE) -f lib/assimp/test/CMakeFiles/Experimental.dir/build.make lib/assimp/test/CMakeFiles/Experimental.dir/clean
+.PHONY : lib/assimp/test/CMakeFiles/Experimental.dir/clean
+
+# clean rule for target.
+clean: lib/assimp/test/CMakeFiles/Experimental.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/assimp/test/headercheck
+
+# Convenience name for "all" pass in the directory.
+lib/assimp/test/headercheck/all:
+
+.PHONY : lib/assimp/test/headercheck/all
+
+# Convenience name for "clean" pass in the directory.
+lib/assimp/test/headercheck/clean:
+
+.PHONY : lib/assimp/test/headercheck/clean
+
+# Convenience name for "preinstall" pass in the directory.
+lib/assimp/test/headercheck/preinstall:
+
+.PHONY : lib/assimp/test/headercheck/preinstall
 
 #=============================================================================
 # Directory level rules for directory src
@@ -254,9 +1498,11 @@ src/preinstall:
 # All Build rule for target.
 src/CMakeFiles/particles_lib.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
 src/CMakeFiles/particles_lib.dir/all: lib/glew/CMakeFiles/libglew_static.dir/all
+src/CMakeFiles/particles_lib.dir/all: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+src/CMakeFiles/particles_lib.dir/all: lib/assimp/code/CMakeFiles/assimp.dir/all
 	$(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/depend
 	$(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=24,25 "Built target particles_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num=75 "Built target particles_lib"
 .PHONY : src/CMakeFiles/particles_lib.dir/all
 
 # Include target in all.
@@ -266,9 +1512,9 @@ all: src/CMakeFiles/particles_lib.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/particles_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 71
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 .PHONY : src/CMakeFiles/particles_lib.dir/rule
 
 # Convenience name for target.
@@ -293,7 +1539,7 @@ clean: src/CMakeFiles/particles_lib.dir/clean
 src/CMakeFiles/particles_copy_resources.dir/all:
 	$(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/depend
 	$(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=23 "Built target particles_copy_resources"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num= "Built target particles_copy_resources"
 .PHONY : src/CMakeFiles/particles_copy_resources.dir/all
 
 # Include target in all.
@@ -303,9 +1549,9 @@ all: src/CMakeFiles/particles_copy_resources.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/particles_copy_resources.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_copy_resources.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 .PHONY : src/CMakeFiles/particles_copy_resources.dir/rule
 
 # Convenience name for target.
@@ -329,11 +1575,13 @@ clean: src/CMakeFiles/particles_copy_resources.dir/clean
 # All Build rule for target.
 src/CMakeFiles/particles.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
 src/CMakeFiles/particles.dir/all: lib/glew/CMakeFiles/libglew_static.dir/all
+src/CMakeFiles/particles.dir/all: lib/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+src/CMakeFiles/particles.dir/all: lib/assimp/code/CMakeFiles/assimp.dir/all
 src/CMakeFiles/particles.dir/all: src/CMakeFiles/particles_lib.dir/all
 src/CMakeFiles/particles.dir/all: src/CMakeFiles/particles_copy_resources.dir/all
 	$(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/depend
 	$(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=21,22 "Built target particles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num=74 "Built target particles"
 .PHONY : src/CMakeFiles/particles.dir/all
 
 # Include target in all.
@@ -343,9 +1591,9 @@ all: src/CMakeFiles/particles.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/particles.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 72
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 .PHONY : src/CMakeFiles/particles.dir/rule
 
 # Convenience name for target.

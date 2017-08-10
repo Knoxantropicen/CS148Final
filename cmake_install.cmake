@@ -1,4 +1,4 @@
-# Install script for directory: /Users/KnoxTYS/desktop/SPH-Fluids
+# Install script for directory: /Users/KnoxTYS/desktop/RunningFlame
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,9 +29,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/KnoxTYS/desktop/SPH-Fluids/lib/glfw/cmake_install.cmake")
-  include("/Users/KnoxTYS/desktop/SPH-Fluids/lib/glew/cmake_install.cmake")
-  include("/Users/KnoxTYS/desktop/SPH-Fluids/src/cmake_install.cmake")
+  include("/Users/KnoxTYS/desktop/RunningFlame/lib/glfw/cmake_install.cmake")
+  include("/Users/KnoxTYS/desktop/RunningFlame/lib/glew/cmake_install.cmake")
+  include("/Users/KnoxTYS/desktop/RunningFlame/lib/assimp/cmake_install.cmake")
+  include("/Users/KnoxTYS/desktop/RunningFlame/src/cmake_install.cmake")
 
 endif()
 
@@ -43,5 +44,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/KnoxTYS/desktop/SPH-Fluids/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/KnoxTYS/desktop/RunningFlame/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

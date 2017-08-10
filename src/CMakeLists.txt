@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.2)
 
 if(APPLE)
-    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES})
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} assimp)
 elseif(UNIX)
-    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} GLESv2 EGL)
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} GLESv2 EGL assimp)
 else()
-    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES})
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} assimp)
 endif()
 
 SET(project_BIN ${PROJECT_NAME})
@@ -39,7 +39,8 @@ INCLUDE_DIRECTORIES(
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${GLFW_INCLUDE_PATH}
         ${GLEW_INCLUDE_PATH}
-        ${GLM_INCLUDE_PATH})
+        ${GLM_INCLUDE_PATH}
+        ${ASSIMP_INCLUDE_PATH})
 
 TARGET_LINK_LIBRARIES(${project_LIB} ${project_LIBS})
 TARGET_LINK_LIBRARIES(${project_BIN} ${project_LIB} ${project_LIBS})

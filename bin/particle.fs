@@ -8,8 +8,8 @@ out vec4 color;
 uniform sampler2D tex;
 uniform bool first;
 
-float lifeStage = lifeTime / 6.4f;
-float whiteStage = 0.0, yellowStage = 0.005, redStage = 0.2, greyStage = 0.6, blackStage = 0.8;
+float lifeStage = lifeTime / 4.8f;
+float whiteStage = 0.0, yellowStage = 0.005, redStage = 0.2, greyStage = 0.75, blackStage = 0.9;
 vec3 white = vec3(1.0f, 1.0f, 1.0f), yellow = vec3(1.0f, 1.0f, 0.0f), red = vec3(1.0f, 0.0f, 0.0f), grey = vec3(0.5f, 0.5f, 0.5f), black = vec3(0.0f, 0.0f, 0.0f);
 
 vec3 flameColor() {

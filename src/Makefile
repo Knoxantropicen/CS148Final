@@ -48,10 +48,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
+CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/RunningFlame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
+CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/RunningFlame
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -94,7 +94,7 @@ install/fast: preinstall/fast
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"assimp-bin\" \"assimp-dev\" \"libassimp4.0.1-dev\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles /Users/KnoxTYS/desktop/SPH-Fluids/src/CMakeFiles/progress.marks
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles 0
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles /Users/KnoxTYS/desktop/RunningFlame/src/CMakeFiles/progress.marks
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/KnoxTYS/desktop/RunningFlame/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/particles_lib.dir/rule:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_lib.dir/rule
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_lib.dir/rule
 .PHONY : src/CMakeFiles/particles_lib.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ particles_lib: src/CMakeFiles/particles_lib.dir/rule
 
 # fast build rule for target.
 particles_lib/fast:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/build
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/build
 .PHONY : particles_lib/fast
 
 # Convenience name for target.
 src/CMakeFiles/particles_copy_resources.dir/rule:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_copy_resources.dir/rule
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles_copy_resources.dir/rule
 .PHONY : src/CMakeFiles/particles_copy_resources.dir/rule
 
 # Convenience name for target.
@@ -183,12 +183,12 @@ particles_copy_resources: src/CMakeFiles/particles_copy_resources.dir/rule
 
 # fast build rule for target.
 particles_copy_resources/fast:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/build
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles_copy_resources.dir/build.make src/CMakeFiles/particles_copy_resources.dir/build
 .PHONY : particles_copy_resources/fast
 
 # Convenience name for target.
 src/CMakeFiles/particles.dir/rule:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles.dir/rule
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/particles.dir/rule
 .PHONY : src/CMakeFiles/particles.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ particles: src/CMakeFiles/particles.dir/rule
 
 # fast build rule for target.
 particles/fast:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/build
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/build
 .PHONY : particles/fast
 
 main.o: main.cpp.o
@@ -207,8 +207,8 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.o
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.o
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.o
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -217,8 +217,8 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.i
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.i
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.i
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -227,8 +227,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.s
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.s
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles_lib.dir/build.make src/CMakeFiles/particles_lib.dir/main.cpp.s
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(MAKE) -f src/CMakeFiles/particles.dir/build.make src/CMakeFiles/particles.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -260,6 +260,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,31 +4,20 @@
 #include <cmath>
 #include <sstream>
 
-#include <GL/glew.h>
-
-#include <GLFW/glfw3.h>
-// #include "Particle.h"
-#include "Camera.h"
-#include "Shader.h"
-#ifndef STB_IMAGE_IMPLEMENTATION
-#define STB_IMAGE_IMPLEMENTATION
-#endif
-#include "stb_image.h"
-
-#define GLM_FORCE_RADIANS
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
+#include "ResourceManager.h"
 
 struct Particle {
 	glm::vec3 pos, vel, col;
 	float lifetime;
 	Particle() {
-
-		glm::vec3 a(1.0f, 0.0f, 0.0f);
-
-		lifetime = drand48() * -6.4f;
-		pos = glm::vec3(0.0f, drand48() * 5.0f, 0.0f);
+		lifetime = drand48() * -4.8f;
+		float alpha = drand48() * 2 * M_PI;
+		float radius = drand48() * 0.75;
+		if (drand48() < 0.5f) {
+			pos = glm::vec3(radius * sin(alpha) - 1.25f, radius * cos(alpha) - 0.05f, 0.0f);
+		} else {
+			pos = glm::vec3(radius * sin(alpha) + 1.25f, radius * cos(alpha) - 0.05f, 0.0f);
+		}
 		vel = glm::vec3(0.0f, 0.0f, 0.0f);
 		col = glm::vec3(1.0f, 1.0f, 1.0f);
 	}
@@ -38,14 +27,13 @@ class ParticleSystem {
 public:
 	ParticleSystem(GLFWwindow * window) {
 		m_window = window;
-		m_particle_shader = new Shader("./particle.vs", "./particle.frag");
+		m_particle_shader = new Shader("./particle.vs", "./particle.fs");
 		m_advect_shader = new Shader("./advect.vs", 0);
 
-		m_system_stop = false;
 		m_total_time = 0;
 		m_max_p_num = 50000;
 
-		m_camera = new Camera(glm::vec3(0.0, 5.0, 15.0));
+		m_camera = RM::getInstance().camera;
 
 		m_particles = new Particle[m_max_p_num];
 
@@ -63,29 +51,17 @@ public:
 			glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, 0, m_particleBuffer[i]);
 		}
 
-		// glBindVertexArray(0);
-
 		m_isFirst = true;
 		m_currVB = 0;
 		m_currTFB = 1;
 
-		m_x = m_z = 0;
+		m_ctrl = RM::getInstance().ctrl;
 
-		// std::stringstream pngIndex;
-
-		// for (size_t i = 0; i < 8; ++i) {
-		// 	for (size_t j = 0; j < 8; ++j) {
-		// 		pngIndex << "../src/textures/ParticleAtlas/" << i << "-" << j << ".png";
-		// 		m_p_tex[i * 8 + j] = loadTexture(pngIndex.str().c_str());
-		// 		pngIndex.str("");
-		// 	}
-		// }
-
-		m_tex = loadTexture("../src/textures/Particle-Sprite-Smoke-1.png");
+		m_tex = loadTexture("../resources/textures/Particle-Sprite-Smoke-1.png");
 
 		m_particle_shader->Use();
+
 		glActiveTexture(GL_TEXTURE0);
-	    // glBindTexture(GL_TEXTURE_2D, m_p_tex[0]);
 	    glBindTexture(GL_TEXTURE_2D, m_tex);
 	}
 
@@ -97,7 +73,7 @@ public:
 		m_advect_shader->Use();
 		GLint advectShaderLoc = m_advect_shader->Program;
 		glUniform1f(glGetUniformLocation(advectShaderLoc, "dt"), time_step);
-		glUniform3f(glGetUniformLocation(advectShaderLoc, "iniPos"), m_x, 0.0f, m_z);
+		glUniform3f(glGetUniformLocation(advectShaderLoc, "iniPos"), m_ctrl->x, 0.0f, m_ctrl->z);
 
 		glBindVertexArray(m_particleVAO);
 
@@ -114,6 +90,7 @@ public:
 		glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(9 * sizeof(GLfloat)));
 		
 		glBeginTransformFeedback(GL_POINTS);
+		glActiveTexture(GL_TEXTURE0);
 
 		if (m_isFirst) {
 			glDrawArrays(GL_POINTS, 0, m_max_p_num);
@@ -129,16 +106,13 @@ public:
 	}
 
 	void render() const {
-		glClearColor(0.08f, 0.08f, 0.16f, 1.0f);
-	    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	    m_particle_shader->Use();
 
 	    int w, h;
 	    glfwGetFramebufferSize(m_window, &w, &h);
 
-	    glm::mat4 view;
-	    view = m_camera->GetViewMatrix();
+	    glm::mat4 view = m_camera->GetViewMatrix();
 	    glm::mat4 projection = glm::perspective(m_camera->Zoom, (GLfloat)w / (GLfloat)h, 0.1f, 100.0f);
 	    GLint viewLoc  = glGetUniformLocation(m_particle_shader->Program, "view");
 	    GLint projLoc  = glGetUniformLocation(m_particle_shader->Program, "projection");
@@ -155,13 +129,13 @@ public:
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)0);
 		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
 		glVertexAttribPointer(2, 1, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(9 * sizeof(GLfloat)));
-		glDrawTransformFeedback(GL_POINTS, m_transformFeedback[m_currTFB]);
 
-		glfwSwapBuffers(m_window);
+		glActiveTexture(GL_TEXTURE0);
+		glDrawTransformFeedback(GL_POINTS, m_transformFeedback[m_currTFB]);
 	}
 
 	void advance(float time_step) {
-		if (!m_system_stop) update(time_step);
+		if (!m_ctrl->system_stop) update(time_step);
 		render();
 
 		m_currVB = m_currTFB;
@@ -171,6 +145,7 @@ public:
 	unsigned int loadTexture(char const * path) {
 		unsigned int textureID;
 	    glGenTextures(1, &textureID);
+		glActiveTexture(GL_TEXTURE0);
 	    
 	    int width = 0, height = 0, nrComponents = 0;
 	    unsigned char *data = stbi_load(path, &width, &height, &nrComponents, 0);
@@ -204,17 +179,12 @@ public:
 	    return textureID;
 	}
 
-	Camera * m_camera;
-
-	bool m_system_stop;
-	float m_x, m_z;
-
 private:
 
 	GLFWwindow * m_window;
-
 	Shader * m_particle_shader;
 	Shader * m_advect_shader;
+	Camera * m_camera;
 
 	GLuint m_tex;
 
@@ -229,6 +199,7 @@ private:
 
 	float m_total_time;
 	size_t m_max_p_num;
-	
+
+	Ctrl * m_ctrl;
 };
 

@@ -13,7 +13,8 @@ out float vTime;
 uniform float dt;	// delta time
 uniform vec3 iniPos;	// initially generated position
 
-vec3 a;	//acceleration
+vec3 a = vec3(0.0f, 0.0f, 1.0f);	//acceleration
+vec3 localPos;
 
 // boundary
 // float xmin, xmax;
@@ -27,7 +28,6 @@ float rand(vec2 n)
 
 void main()
 {
-	a = vec3(1.0f, 0.0f, 0.0f);
 
 	// ymin = -3.0f;
 	// ymax = 3.0f;
@@ -36,7 +36,12 @@ void main()
 
 	vTime = Time + dt;
 
-	float rnd = rand(Pos.xy + normalize(vec2(vTime, 1 / vTime)));
+	float alpha = rand(Pos.xy + normalize(vec2(vTime, 1 / vTime))) * 3.14159265359 * 2;
+	float radius = rand(Pos.yz + normalize(vec2(vTime, 1 / vTime))) * 0.75;
+	float lr = rand(Pos.xz + normalize(vec2(vTime, 1 / vTime)));
+
+	if (lr < 0.5f) localPos = vec3(radius * sin(alpha) - 1.25f, radius * cos(alpha) - 0.05f, 0.0f);
+	else localPos = vec3(radius * sin(alpha) + 1.25f, radius * cos(alpha) - 0.05f, 0.0f);
 
 	if (vTime > 0.0f) {
 		vVel = Vel + a * dt;
@@ -44,13 +49,13 @@ void main()
 		vCol = Col;
 	} else {
 		vVel = Vel;
-		vPos = iniPos + rnd * vec3(0.0f, 5.0f, 0.0f);
+		vPos = iniPos + localPos;
 		vCol = Col;
 	}
 
-	if (vTime > 6.4f) {
-		vTime -= 6.4f;
-		vPos = iniPos + rnd * vec3(0.0f, 5.0f, 0.0f);
+	if (vTime > 4.8f) {
+		vTime -= 4.8f;
+		vPos = iniPos + localPos;
 		vVel = vec3(0.0f, 0.0f, 0.0f);
 	}
 

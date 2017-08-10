@@ -43,10 +43,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
+CMAKE_SOURCE_DIR = /Users/KnoxTYS/desktop/RunningFlame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
+CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/RunningFlame
 
 # Utility rule file for particles_copy_resources.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /Users/KnoxTYS/desktop/SPH-Fluids
 include src/CMakeFiles/particles_copy_resources.dir/progress.make
 
 src/CMakeFiles/particles_copy_resources:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/KnoxTYS/desktop/SPH-Fluids/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying resources "
-	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && /Applications/CMake.app/Contents/bin/cmake -E copy_directory /Users/KnoxTYS/desktop/SPH-Fluids/src/shaders /Users/KnoxTYS/desktop/SPH-Fluids/bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/KnoxTYS/desktop/RunningFlame/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying resources "
+	cd /Users/KnoxTYS/desktop/RunningFlame/src && /Applications/CMake.app/Contents/bin/cmake -E copy_directory /Users/KnoxTYS/desktop/RunningFlame/src/shaders /Users/KnoxTYS/desktop/RunningFlame/bin
 
 particles_copy_resources: src/CMakeFiles/particles_copy_resources
 particles_copy_resources: src/CMakeFiles/particles_copy_resources.dir/build.make
@@ -68,10 +68,10 @@ src/CMakeFiles/particles_copy_resources.dir/build: particles_copy_resources
 .PHONY : src/CMakeFiles/particles_copy_resources.dir/build
 
 src/CMakeFiles/particles_copy_resources.dir/clean:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids/src && $(CMAKE_COMMAND) -P CMakeFiles/particles_copy_resources.dir/cmake_clean.cmake
+	cd /Users/KnoxTYS/desktop/RunningFlame/src && $(CMAKE_COMMAND) -P CMakeFiles/particles_copy_resources.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/particles_copy_resources.dir/clean
 
 src/CMakeFiles/particles_copy_resources.dir/depend:
-	cd /Users/KnoxTYS/desktop/SPH-Fluids && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/KnoxTYS/desktop/SPH-Fluids /Users/KnoxTYS/desktop/SPH-Fluids/src /Users/KnoxTYS/desktop/SPH-Fluids /Users/KnoxTYS/desktop/SPH-Fluids/src /Users/KnoxTYS/desktop/SPH-Fluids/src/CMakeFiles/particles_copy_resources.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/KnoxTYS/desktop/RunningFlame && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/KnoxTYS/desktop/RunningFlame /Users/KnoxTYS/desktop/RunningFlame/src /Users/KnoxTYS/desktop/RunningFlame /Users/KnoxTYS/desktop/RunningFlame/src /Users/KnoxTYS/desktop/RunningFlame/src/CMakeFiles/particles_copy_resources.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/particles_copy_resources.dir/depend
 

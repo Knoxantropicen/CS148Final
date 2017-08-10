@@ -7,3 +7,6 @@
 [submodule "lib/glew-cmake"]
 	path = lib/glew
 	url = https://github.com/Perlmint/glew-cmake.git
+[submodule "lib/assimp"]
+	path = lib/assimp
+	url = https://github.com/assimp/assimp.git
