@@ -57,7 +57,7 @@ public:
         
         for(GLuint i = 0; i < this->textures.size(); i++)
         {
-            glActiveTexture(GL_TEXTURE0 + i); // Active proper texture unit before binding
+            glActiveTexture(GL_TEXTURE4 + i); // Active proper texture unit before binding
             // Retrieve texture number (the N in diffuse_textureN)
             stringstream ss;
             string number;
@@ -70,7 +70,7 @@ public:
                 ss << reflectionNr++;
             number = ss.str();
             // Now set the sampler to the correct texture unit
-            glUniform1i(glGetUniformLocation(shader.Program, (name + number).c_str()), i);
+            glUniform1i(glGetUniformLocation(shader.Program, (name + number).c_str()), 4+i);
             
             // And finally bind the texture
             glBindTexture(GL_TEXTURE_2D, this->textures[i].id);
@@ -78,7 +78,7 @@ public:
         glActiveTexture(GL_TEXTURE0); // Always good practice to set everything back to defaults once configured.
         
         // Also set each mesh's shininess property to a default value (if you want you could extend this to another mesh property and possibly change this value)
-        //glUniform1f(glGetUniformLocation(shader.Program, "material.shininess"), 16.0f);
+        glUniform1f(glGetUniformLocation(shader.Program, "material.shininess"), 16.0f);
         
         // Draw mesh
         glBindVertexArray(this->VAO);

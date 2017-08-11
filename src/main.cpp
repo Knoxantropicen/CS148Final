@@ -34,6 +34,7 @@ int frame_count = 0;
 ParticleSystem * particleSystem;
 ModelSystem * modelSystem;
 Skybox * skybox;
+Ctrl * ctrl;
 
 GLFWwindow* setupWindow() 
 {
@@ -123,12 +124,17 @@ void handleInput() {
     if (keys[GLFW_KEY_A]) RM::getInstance().camera->ProcessKeyboard(LEFT, delta_time);
     if (keys[GLFW_KEY_D]) RM::getInstance().camera->ProcessKeyboard(RIGHT, delta_time);
 
-    if (keys[GLFW_KEY_I]) RM::getInstance().ctrl->z -= 0.1f;
-    if (keys[GLFW_KEY_K]) RM::getInstance().ctrl->z += 0.1f;
-    // if (keys[GLFW_KEY_J]) RM::getInstance().ctrl->x -= 0.1f;
-    // if (keys[GLFW_KEY_L]) RM::getInstance().ctrl->x += 0.1f;
-    if (keys[GLFW_KEY_J]) RM::getInstance().ctrl->a -= M_PI / 360;
-    if (keys[GLFW_KEY_L]) RM::getInstance().ctrl->a += M_PI / 360;
+    float speed = 0.1f, degree = M_PI / 360;
+    if (keys[GLFW_KEY_I]) {
+        ctrl->x -= speed * sin(ctrl->a);
+        ctrl->z -= speed * cos(ctrl->a);
+    }
+    if (keys[GLFW_KEY_K]) {
+        ctrl->x += speed * sin(ctrl->a);
+        ctrl->z += speed * cos(ctrl->a);
+    }
+    if (keys[GLFW_KEY_J]) ctrl->a += degree;
+    if (keys[GLFW_KEY_L]) ctrl->a -= degree;
 }
 
 void cleanup() {
@@ -161,6 +167,7 @@ int main() {
 	particleSystem = new ParticleSystem(window);
     modelSystem = new ModelSystem(window);
     skybox = new Skybox(window);
+    ctrl = RM::getInstance().ctrl;
 
 	last_time = glfwGetTime();
 
@@ -174,6 +181,7 @@ int main() {
 
         glClearColor(0.08f, 0.08f, 0.16f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
         skybox->advance();
         particleSystem->advance(delta_time);
         modelSystem->advance();

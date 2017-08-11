@@ -124,8 +124,8 @@ public:
 	    glUniformMatrix4fv(modeLoc, 1, GL_FALSE, glm::value_ptr(model));
         // skybox cube
         glBindVertexArray(m_vao);
-        glActiveTexture(GL_TEXTURE0);
-        glUniform1i(glGetUniformLocation(m_shader->Program, "skybox"), 0);
+        glActiveTexture(GL_TEXTURE1);
+        glUniform1i(glGetUniformLocation(m_shader->Program, "skybox"), 1);
         glBindTexture(GL_TEXTURE_CUBE_MAP, m_skyboxTexture);
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);

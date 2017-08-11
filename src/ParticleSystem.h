@@ -57,12 +57,13 @@ public:
 
 		m_ctrl = RM::getInstance().ctrl;
 
+		glActiveTexture(GL_TEXTURE2);
+		glUniform1i(glGetUniformLocation(m_particle_shader->Program, "tex"), 2);
 		m_tex = loadTexture("../resources/textures/Particle-Sprite-Smoke-1.png");
+		glBindTexture(GL_TEXTURE_2D, m_tex);
 
 		m_particle_shader->Use();
-
-		glActiveTexture(GL_TEXTURE0);
-	    glBindTexture(GL_TEXTURE_2D, m_tex);
+		
 	}
 
 	void update(float time_step) {
@@ -89,8 +90,11 @@ public:
 		glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
 		glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(9 * sizeof(GLfloat)));
 		
+		glActiveTexture(GL_TEXTURE2);
+		glUniform1i(glGetUniformLocation(m_particle_shader->Program, "tex"), 2);
+		glBindTexture(GL_TEXTURE_2D, m_tex);
+
 		glBeginTransformFeedback(GL_POINTS);
-		glActiveTexture(GL_TEXTURE0);
 
 		if (m_isFirst) {
 			glDrawArrays(GL_POINTS, 0, m_max_p_num);
@@ -130,7 +134,10 @@ public:
 		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
 		glVertexAttribPointer(2, 1, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(9 * sizeof(GLfloat)));
 
-		glActiveTexture(GL_TEXTURE0);
+		glActiveTexture(GL_TEXTURE2);
+		glUniform1i(glGetUniformLocation(m_particle_shader->Program, "tex"), 2);
+		glBindTexture(GL_TEXTURE_2D, m_tex);
+
 		glDrawTransformFeedback(GL_POINTS, m_transformFeedback[m_currTFB]);
 	}
 
@@ -145,7 +152,6 @@ public:
 	unsigned int loadTexture(char const * path) {
 		unsigned int textureID;
 	    glGenTextures(1, &textureID);
-		glActiveTexture(GL_TEXTURE0);
 	    
 	    int width = 0, height = 0, nrComponents = 0;
 	    unsigned char *data = stbi_load(path, &width, &height, &nrComponents, 0);
