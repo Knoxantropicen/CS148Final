@@ -25,8 +25,7 @@ struct Particle {
 
 class ParticleSystem {
 public:
-	ParticleSystem(GLFWwindow * window) {
-		m_window = window;
+	ParticleSystem() {
 		m_particle_shader = new Shader("./particle.vs", "./particle.fs");
 		m_advect_shader = new Shader("./advect.vs", 0);
 
@@ -57,13 +56,19 @@ public:
 
 		m_ctrl = RM::getInstance().ctrl;
 
-		glActiveTexture(GL_TEXTURE2);
-		glUniform1i(glGetUniformLocation(m_particle_shader->Program, "tex"), 2);
 		m_tex = loadTexture("../resources/textures/Particle-Sprite-Smoke-1.png");
-		glBindTexture(GL_TEXTURE_2D, m_tex);
 
 		m_particle_shader->Use();
+
+		glActiveTexture(GL_TEXTURE2);
+		glUniform1i(glGetUniformLocation(m_particle_shader->Program, "tex"), 2);
+		glBindTexture(GL_TEXTURE_2D, m_tex);
 		
+		int w, h;
+	    glfwGetFramebufferSize(RM::getInstance().window, &w, &h);
+		glm::mat4 projection = glm::perspective(m_camera->Zoom, (GLfloat)w / (GLfloat)h, 0.1f, 1000.0f);
+		GLint projLoc  = glGetUniformLocation(m_particle_shader->Program, "projection");
+	    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 	}
 
 	void update(float time_step) {
@@ -74,7 +79,9 @@ public:
 		m_advect_shader->Use();
 		GLint advectShaderLoc = m_advect_shader->Program;
 		glUniform1f(glGetUniformLocation(advectShaderLoc, "dt"), time_step);
-		glUniform3f(glGetUniformLocation(advectShaderLoc, "iniPos"), m_ctrl->x, 0.0f, m_ctrl->z);
+		glUniform3f(glGetUniformLocation(advectShaderLoc, "iniPos"), m_ctrl->x, m_ctrl->y, m_ctrl->z);
+		glUniform1f(glGetUniformLocation(advectShaderLoc, "alpha"), m_ctrl->a);
+		glUniform1f(glGetUniformLocation(advectShaderLoc, "phi"), m_ctrl->p);
 
 		glBindVertexArray(m_particleVAO);
 
@@ -113,16 +120,9 @@ public:
 
 	    m_particle_shader->Use();
 
-	    int w, h;
-	    glfwGetFramebufferSize(m_window, &w, &h);
-
 	    glm::mat4 view = m_camera->GetViewMatrix();
-	    glm::mat4 projection = glm::perspective(m_camera->Zoom, (GLfloat)w / (GLfloat)h, 0.1f, 100.0f);
 	    GLint viewLoc  = glGetUniformLocation(m_particle_shader->Program, "view");
-	    GLint projLoc  = glGetUniformLocation(m_particle_shader->Program, "projection");
 	    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-	    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-
 	    glUniform3f(glGetUniformLocation(m_particle_shader->Program, "cameraPos"), m_camera->Position.x, m_camera->Position.y, m_camera->Position.z);
 
 	    glBindVertexArray(m_particleVAO);
@@ -134,8 +134,6 @@ public:
 		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
 		glVertexAttribPointer(2, 1, GL_FLOAT, GL_FALSE, 10 * sizeof(GLfloat), (GLvoid*)(9 * sizeof(GLfloat)));
 
-		glActiveTexture(GL_TEXTURE2);
-		glUniform1i(glGetUniformLocation(m_particle_shader->Program, "tex"), 2);
 		glBindTexture(GL_TEXTURE_2D, m_tex);
 
 		glDrawTransformFeedback(GL_POINTS, m_transformFeedback[m_currTFB]);
@@ -149,45 +147,8 @@ public:
 		m_currTFB = (m_currTFB + 1) & 0x1;
 	}
 
-	unsigned int loadTexture(char const * path) {
-		unsigned int textureID;
-	    glGenTextures(1, &textureID);
-	    
-	    int width = 0, height = 0, nrComponents = 0;
-	    unsigned char *data = stbi_load(path, &width, &height, &nrComponents, 0);
-	    if (data)
-	    {
-	        GLenum format = 0;
-	        if (nrComponents == 1)
-	            format = GL_RED;
-	        else if (nrComponents == 3)
-	            format = GL_RGB;
-	        else if (nrComponents == 4)
-	            format = GL_RGBA;
-
-	        glBindTexture(GL_TEXTURE_2D, textureID);
-	        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
-	        glGenerateMipmap(GL_TEXTURE_2D);
-
-	        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-	        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-	        stbi_image_free(data);
-	    }
-	    else
-	    {
-	        std::cout << "Texture failed to load at path: " << path << std::endl;
-	        stbi_image_free(data);
-	    }
-
-	    return textureID;
-	}
-
 private:
 
-	GLFWwindow * m_window;
 	Shader * m_particle_shader;
 	Shader * m_advect_shader;
 	Camera * m_camera;

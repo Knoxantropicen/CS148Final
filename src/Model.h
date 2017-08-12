@@ -15,7 +15,7 @@ class Model
 public:
     /*  Functions   */
     // Constructor, expects a filepath to a 3D model.
-    Model(GLchar* path)
+    Model(string path)
     {
         this->loadModel(path);
     }
@@ -119,19 +119,16 @@ private:
                 indices.push_back(face.mIndices[j]);
         }
         // Process materials
-        if (mesh->mMaterialIndex >= 0)
-        {
-            aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
-            vector<Texture> diffuseMaps = this->loadMaterialTextures(material,
-                                                                     aiTextureType_DIFFUSE, "texture_diffuse");
-            textures.insert(textures.end(), diffuseMaps.begin(), diffuseMaps.end());
-            vector<Texture> specularMaps = this->loadMaterialTextures(material,
-                                                                      aiTextureType_SPECULAR, "texture_specular");
-            textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
-            vector<Texture> reflectionMaps = this->loadMaterialTextures(material,
-                                                                        aiTextureType_AMBIENT, "texture_reflection");
-            textures.insert(textures.end(), reflectionMaps.begin(), reflectionMaps.end());
-        }
+        aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
+        vector<Texture> diffuseMaps = this->loadMaterialTextures(material,
+                                                                 aiTextureType_DIFFUSE, "texture_diffuse");
+        textures.insert(textures.end(), diffuseMaps.begin(), diffuseMaps.end());
+        vector<Texture> specularMaps = this->loadMaterialTextures(material,
+                                                                  aiTextureType_SPECULAR, "texture_specular");
+        textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
+        vector<Texture> reflectionMaps = this->loadMaterialTextures(material,
+                                                                    aiTextureType_AMBIENT, "texture_reflection");
+        textures.insert(textures.end(), reflectionMaps.begin(), reflectionMaps.end());
         
         // Return a mesh object created from the extracted mesh data
         return Mesh(vertices, indices, textures);

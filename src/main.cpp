@@ -15,6 +15,7 @@
 #include "ParticleSystem.h"
 #include "ModelSystem.h"
 #include "Skybox.h"
+#include "City.h"
 
 using namespace std;
 
@@ -77,7 +78,7 @@ GLFWwindow* setupWindow()
 void setupInputHandlers(GLFWwindow * window) {
     glfwSetKeyCallback(window, key_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
-    glfwSetScrollCallback(window, scroll_callback);
+    // glfwSetScrollCallback(window, scroll_callback);
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode){
@@ -112,37 +113,34 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
     RM::getInstance().camera->ProcessMouseMovement(xoffset, yoffset);
 }
 
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
-    RM::getInstance().camera->ProcessMouseScroll(yoffset);
-}
+// void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
+//     RM::getInstance().camera->ProcessMouseScroll(yoffset);
+// }
 
 void handleInput() {
 	glfwPollEvents();
 
-    if (keys[GLFW_KEY_W]) RM::getInstance().camera->ProcessKeyboard(FORWARD, delta_time);
-    if (keys[GLFW_KEY_S]) RM::getInstance().camera->ProcessKeyboard(BACKWARD, delta_time);
-    if (keys[GLFW_KEY_A]) RM::getInstance().camera->ProcessKeyboard(LEFT, delta_time);
-    if (keys[GLFW_KEY_D]) RM::getInstance().camera->ProcessKeyboard(RIGHT, delta_time);
+    if (keys[GLFW_KEY_W]) RM::getInstance().camera->ProcessKeyboard(FORWARD, 5 * delta_time);
+    if (keys[GLFW_KEY_S]) RM::getInstance().camera->ProcessKeyboard(BACKWARD, 5 * delta_time);
+    if (keys[GLFW_KEY_A]) RM::getInstance().camera->ProcessKeyboard(LEFT, 5 * delta_time);
+    if (keys[GLFW_KEY_D]) RM::getInstance().camera->ProcessKeyboard(RIGHT, 5 * delta_time);
 
-    float speed = 0.1f, degree = M_PI / 360;
+    float speed = 25.0f, degree = 3 * M_PI / 360;
     if (keys[GLFW_KEY_I]) {
-        ctrl->x -= speed * sin(ctrl->a);
-        ctrl->z -= speed * cos(ctrl->a);
+        ctrl->x -= speed * sin(ctrl->a) * cos(ctrl->p) * delta_time;
+        ctrl->z -= speed * cos(ctrl->a) * cos(ctrl->p) * delta_time;
+        ctrl->y -= speed * sin(ctrl->p) * delta_time;
     }
     if (keys[GLFW_KEY_K]) {
-        ctrl->x += speed * sin(ctrl->a);
-        ctrl->z += speed * cos(ctrl->a);
+        ctrl->x += speed * sin(ctrl->a) * cos(ctrl->p) * delta_time;
+        ctrl->z += speed * cos(ctrl->a) * cos(ctrl->p) * delta_time;
+        ctrl->y += speed * sin(ctrl->p) * delta_time;
     }
     if (keys[GLFW_KEY_J]) ctrl->a += degree;
     if (keys[GLFW_KEY_L]) ctrl->a -= degree;
+    if (keys[GLFW_KEY_U]) ctrl->p -= degree;
+    if (keys[GLFW_KEY_O]) ctrl->p += degree;
 }
-
-void cleanup() {
-	glfwTerminate();
-	if (particleSystem) delete particleSystem;
-    if (modelSystem) delete modelSystem;
-}
-
 
 void updateFpsCounter(GLFWwindow* window) {
     double current_seconds;
@@ -164,10 +162,14 @@ int main() {
 	GLFWwindow * window = setupWindow();
 	setupInputHandlers(window);
 
-	particleSystem = new ParticleSystem(window);
-    modelSystem = new ModelSystem(window);
-    skybox = new Skybox(window);
+    RM::getInstance().window = window;
+
+	particleSystem = new ParticleSystem();
+    modelSystem = new ModelSystem();
+    skybox = new Skybox();
     ctrl = RM::getInstance().ctrl;
+
+    City * city = new City();
 
 	last_time = glfwGetTime();
 
@@ -185,12 +187,13 @@ int main() {
         skybox->advance();
         particleSystem->advance(delta_time);
         modelSystem->advance();
+        city->advance();
 
 		last_time = curr_time;
 
         glfwSwapBuffers(window);
 	}
 
-	cleanup();
+	glfwTerminate();
 	return 0;
 }
