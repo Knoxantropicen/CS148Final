@@ -71,8 +71,25 @@ public:
 
 	    m_shader->Use();
 
-	    glActiveTexture(GL_TEXTURE6);
-		glUniform1i(glGetUniformLocation(m_shader->Program, "tex"), 6);
+	    switch (type) {
+	    	case 0: {
+	    		glActiveTexture(GL_TEXTURE6);
+				glUniform1i(glGetUniformLocation(m_shader->Program, "tex"), 6);
+				break;
+	    	}
+	    	case 1: {
+	    		glActiveTexture(GL_TEXTURE7);
+				glUniform1i(glGetUniformLocation(m_shader->Program, "tex"), 7);
+				break;
+	    	}
+	    	case 2: {
+	    		glActiveTexture(GL_TEXTURE8);
+				glUniform1i(glGetUniformLocation(m_shader->Program, "tex"), 8);
+				break;
+	    	}
+	    	default: break;
+	    }
+	    
 		glBindTexture(GL_TEXTURE_2D, m_tex);
 
 		int fw, fh;
@@ -96,7 +113,7 @@ public:
 	    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         
         glBindVertexArray(m_vao);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, m_tex);
+        glBindTexture(GL_TEXTURE_2D, m_tex);
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
 	}
