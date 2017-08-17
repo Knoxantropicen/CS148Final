@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.2)
 
+find_library(IRRKLANG_LIB irrKlang)
+
 if(APPLE)
-    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} assimp)
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} assimp ${IRRKLANG_LIB})
 elseif(UNIX)
-    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} GLESv2 EGL assimp)
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} GLESv2 EGL assimp ${IRRKLANG_LIB})
 else()
-    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} assimp)
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} assimp ${IRRKLANG_LIB})
 endif()
 
 SET(project_BIN ${PROJECT_NAME})
@@ -40,10 +42,13 @@ INCLUDE_DIRECTORIES(
         ${GLFW_INCLUDE_PATH}
         ${GLEW_INCLUDE_PATH}
         ${GLM_INCLUDE_PATH}
-        ${ASSIMP_INCLUDE_PATH})
+        ${ASSIMP_INCLUDE_PATH}
+	${IRRKLANG_INCLUDE_PATH})
+
 
 TARGET_LINK_LIBRARIES(${project_LIB} ${project_LIBS})
 TARGET_LINK_LIBRARIES(${project_BIN} ${project_LIB} ${project_LIBS})
+
 
 SET_TARGET_PROPERTIES(${project_BIN} PROPERTIES
         OUTPUT_NAME ${project_BIN}

@@ -12,6 +12,8 @@ public:
 		ss << "../resources/textures/building" << type << ".jpg";
 		m_tex = loadTexture(ss.str().c_str());
 
+		m_type = type;
+
 		GLfloat vertices[] = {
 	        // pos 		// tex
 	        0, h, 0,    0, h,	
@@ -56,6 +58,11 @@ public:
 	        0, 0, w,    0, 0,
 	        l, 0, w,	0, 0
 	    };
+
+	    for (int i = 0; i < 36; ++i) {
+	    	vertices[i * 5] += 1 - l / 2;
+	    	vertices[i * 5 + 2] += 1 - w / 2;
+	    }
 
 	    GLuint vbo;
 	    glGenVertexArrays(1, &m_vao);
@@ -102,6 +109,20 @@ public:
 	    model = glm::scale(model, glm::vec3(scale, scale, scale));
 	    GLint modeLoc  = glGetUniformLocation(m_shader->Program, "model");
 	    glUniformMatrix4fv(modeLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+	    m_translations = RM::getInstance().translations;
+	    for (GLuint i = 0; i < 81; ++i) {
+	    	std::stringstream sss;
+	    	std::string index;
+	    	sss << i;
+	    	index = sss.str();
+	    	GLint tranLoc = glGetUniformLocation(m_shader->Program, ("offsets[" + index + "]").c_str());
+	    	glUniform3f(tranLoc, m_translations[i].x, m_translations[i].y, m_translations[i].z);
+	    }
+	}
+
+	void update() {
+
 	}
 
 	void render() const {
@@ -113,12 +134,28 @@ public:
 	    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         
         glBindVertexArray(m_vao);
+        switch (m_type) {
+        	case 0: {
+	    		glActiveTexture(GL_TEXTURE6);
+				break;
+	    	}
+	    	case 1: {
+	    		glActiveTexture(GL_TEXTURE7);
+				break;
+	    	}
+	    	case 2: {
+	    		glActiveTexture(GL_TEXTURE8);
+				break;
+	    	}
+	    	default: break;
+        }
         glBindTexture(GL_TEXTURE_2D, m_tex);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glDrawArraysInstanced(GL_TRIANGLES, 0, 36, 81);
         glBindVertexArray(0);
 	}
 
 	void advance() {
+		update();
 		render();
 	}
 
@@ -126,7 +163,10 @@ private:
 	Shader * m_shader;
 	Camera * m_camera;
 
+	int m_type;
+
 	GLuint m_vao;
 	GLuint m_tex;
 
+	glm::vec3 * m_translations;
 };

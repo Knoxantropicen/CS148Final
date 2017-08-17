@@ -27,7 +27,7 @@ class ParticleSystem {
 public:
 	ParticleSystem() {
 		m_particle_shader = new Shader("./particle.vs", "./particle.fs");
-		m_advect_shader = new Shader("./advect.vs", 0);
+		m_advect_shader = new Shader("./advect.vs", 0, 0, 1);
 
 		m_total_time = 0;
 		m_max_p_num = 50000;

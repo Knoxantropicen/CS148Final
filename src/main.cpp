@@ -11,11 +11,15 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/random.hpp>
 
+#include <irrKlang.h>
+using namespace irrklang;
+
 #include "ResourceManager.h"
 #include "ParticleSystem.h"
 #include "ModelSystem.h"
 #include "Skybox.h"
 #include "City.h"
+#include "Rain.h"
 
 using namespace std;
 
@@ -36,6 +40,8 @@ ParticleSystem * particleSystem;
 ModelSystem * modelSystem;
 Skybox * skybox;
 Ctrl * ctrl;
+
+ISoundEngine * soundEngine;
 
 GLFWwindow* setupWindow() 
 {
@@ -72,6 +78,8 @@ GLFWwindow* setupWindow()
     // glCullFace(GL_BACK);
     // glFrontFace(GL_CCW);
 
+    soundEngine = createIrrKlangDevice();
+
     return window;
 }
 
@@ -87,6 +95,9 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     }
     if (key == GLFW_KEY_P && action == GLFW_RELEASE) {
         RM::getInstance().ctrl->system_stop = !RM::getInstance().ctrl->system_stop;
+    }
+    if (key == GLFW_KEY_F && action == GLFW_RELEASE) {
+        RM::getInstance().ctrl->camera_follow = !RM::getInstance().ctrl->camera_follow;
     }
 
     if (action == GLFW_PRESS) {
@@ -110,7 +121,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
     lastX = xpos;
     lastY = ypos;
 
-    RM::getInstance().camera->ProcessMouseMovement(xoffset, yoffset);
+    if (!RM::getInstance().ctrl->camera_follow) RM::getInstance().camera->ProcessMouseMovement(xoffset, yoffset);
 }
 
 // void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
@@ -120,26 +131,36 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 void handleInput() {
 	glfwPollEvents();
 
-    if (keys[GLFW_KEY_W]) RM::getInstance().camera->ProcessKeyboard(FORWARD, 5 * delta_time);
-    if (keys[GLFW_KEY_S]) RM::getInstance().camera->ProcessKeyboard(BACKWARD, 5 * delta_time);
-    if (keys[GLFW_KEY_A]) RM::getInstance().camera->ProcessKeyboard(LEFT, 5 * delta_time);
-    if (keys[GLFW_KEY_D]) RM::getInstance().camera->ProcessKeyboard(RIGHT, 5 * delta_time);
+    if (!ctrl->camera_follow) {
+        if (keys[GLFW_KEY_W]) RM::getInstance().camera->ProcessKeyboard(FORWARD, 5 * delta_time);
+        if (keys[GLFW_KEY_S]) RM::getInstance().camera->ProcessKeyboard(BACKWARD, 5 * delta_time);
+        if (keys[GLFW_KEY_A]) RM::getInstance().camera->ProcessKeyboard(LEFT, 5 * delta_time);
+        if (keys[GLFW_KEY_D]) RM::getInstance().camera->ProcessKeyboard(RIGHT, 5 * delta_time);
+    }
 
     float speed = 25.0f, degree = 3 * M_PI / 360;
     if (keys[GLFW_KEY_I]) {
         ctrl->x -= speed * sin(ctrl->a) * cos(ctrl->p) * delta_time;
         ctrl->z -= speed * cos(ctrl->a) * cos(ctrl->p) * delta_time;
         ctrl->y -= speed * sin(ctrl->p) * delta_time;
+        if (ctrl->y < -100.0f) ctrl->y = -100.0f;
     }
     if (keys[GLFW_KEY_K]) {
         ctrl->x += speed * sin(ctrl->a) * cos(ctrl->p) * delta_time;
         ctrl->z += speed * cos(ctrl->a) * cos(ctrl->p) * delta_time;
         ctrl->y += speed * sin(ctrl->p) * delta_time;
+        if (ctrl->y < -100.0f) ctrl->y = -100.0f;
     }
     if (keys[GLFW_KEY_J]) ctrl->a += degree;
     if (keys[GLFW_KEY_L]) ctrl->a -= degree;
-    if (keys[GLFW_KEY_U]) ctrl->p -= degree;
-    if (keys[GLFW_KEY_O]) ctrl->p += degree;
+    if (keys[GLFW_KEY_U]) {
+        ctrl->p -= degree;
+        if (ctrl->p < -M_PI) ctrl->p += 2 * M_PI;
+    }
+    if (keys[GLFW_KEY_O]) {
+        ctrl->p += degree;
+        if (ctrl->p > M_PI) ctrl->p -= 2 * M_PI;
+    }
 }
 
 void updateFpsCounter(GLFWwindow* window) {
@@ -170,8 +191,11 @@ int main() {
     ctrl = RM::getInstance().ctrl;
 
     City * city = new City();
+    Rain * rain = new Rain();
 
 	last_time = glfwGetTime();
+
+    soundEngine->play2D("../resources/audio/rainyNight.wav", GL_FALSE);
 
 	while (!glfwWindowShouldClose(window)) {
 
@@ -188,6 +212,7 @@ int main() {
         particleSystem->advance(delta_time);
         modelSystem->advance();
         city->advance();
+        rain->advance(delta_time);
 
 		last_time = curr_time;
 

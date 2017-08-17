@@ -24,11 +24,13 @@
 
 struct Ctrl {
 	bool system_stop;
+    bool camera_follow;
 	float x, y, z;
 	float a;
     float p;
 	Ctrl() {
 		system_stop = false;
+        camera_follow = false;
 		x = y = z = 0;
 		a = 0;
         p = 0;
@@ -53,6 +55,8 @@ public:
 	GLFWwindow * window;
 	Camera * camera;
 	Ctrl * ctrl;
+
+    glm::vec3 translations[81];
 };
 
 unsigned int loadTexture(char const * path) {

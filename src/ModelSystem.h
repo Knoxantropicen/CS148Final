@@ -20,7 +20,12 @@ public:
 	}
 
 	void update() {
-
+		
+		m_camera->Front = glm::vec3(-sin(m_ctrl->a) * cos(m_ctrl->p), -sin(m_ctrl->p), -cos(m_ctrl->a) * cos(m_ctrl->p));
+		glm::vec3 worldUp = (m_ctrl->p < -M_PI/2 || m_ctrl->p > M_PI/2) ? glm::vec3(0.0, -1.0, 0.0) : glm::vec3(0.0, 1.0, 0.0);
+		m_camera->Right = glm::normalize(glm::cross(m_camera->Front, worldUp));
+        m_camera->Up    = glm::normalize(glm::cross(m_camera->Right, m_camera->Front));
+        m_camera->Position = glm::vec3(m_ctrl->x, m_ctrl->y, m_ctrl->z) + m_camera->Up * 5.0f - m_camera->Front * 15.0f;
 	}
 
 	void render() const {
@@ -43,7 +48,7 @@ public:
 	}
 
 	void advance() {
-		if (!m_ctrl->system_stop) update();
+		if (!m_ctrl->system_stop && m_ctrl->camera_follow) update();
 		render();
 	}
 

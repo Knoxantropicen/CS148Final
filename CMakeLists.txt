@@ -77,6 +77,11 @@ SET(ASSIMP_INCLUDE_PATH "${MAINFOLDER}/lib/assimp/include")
 ADD_SUBDIRECTORY(lib/assimp)
 
 #
+# irrKlang
+#
+SET(IRRKLANG_INCLUDE_PATH "${MAINFOLDER}/lib/irrKlang/include")
+
+#
 # Add project sources
 #
 ADD_SUBDIRECTORY(src)
